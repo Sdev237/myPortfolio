@@ -1,0 +1,59 @@
+// Navbar.scss
+
+.navi {
+  background-color: #0d1117;
+  border-radius: 6rem;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%); 
+  width: 25%; 
+  padding: 10px 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  margin-bottom: 5%;
+  h3{
+    color: #fff;
+  }
+  a {
+    color: #fff;
+    padding: 5px;
+    border-radius: 3rem;
+    border-color: #2ea2f0;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 16px;
+
+    &:hover {
+      color: #2ea2f0;
+      border-color: #2ea2f0;
+    }
+  }
+
+  .toggle{
+    padding: 5px;
+    color: #fff;
+    border-radius: 3rem;
+    border-color: #2ea2f0;
+    background-color: #333;
+    &:hover{
+      color: #2ea2f0;
+      background-color: #000;
+    }
+  }
+
+  @media screen and (max-width: 1325px) {
+    width: 47%;
+  }
+
+  &.mobile {
+    
+    margin: 0;
+    width: 100%;
+    border-radius: 0%;
+    justify-content: center; 
+    margin-top: 0;
+  }
+}
