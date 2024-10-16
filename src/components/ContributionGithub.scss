@@ -7,3 +7,296 @@
     margin-bottom: 10px;
   }
 }
+
+.yearSelector {
+  .yearSelectorButton {
+    border: none;
+    padding: 5px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+
+    &:hover {
+      background-color: #30363d;
+    }
+    
+    &.active {
+      background-color: #2ea2f0;
+      color: #fff;
+    }
+  }
+}
+.contribution-github {
+  padding: 20px;
+  border-radius: 6px;
+  max-width: calc(53 * 13px + 60px);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #c9d1d9;
+
+  .contribution-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    .contribution-count {
+      font-size: 19px;
+    }
+
+    .contribution-settings {
+      color: #8b949e;
+      font-size: 14px;
+    }
+  }
+
+  .contribution-content {
+    display: flex;
+    gap: 20px;
+  }
+
+  .contribution-graph {
+    border-radius: 6px;
+    padding: 8px;
+    flex: 1;
+
+    .months-container {
+      display: flex;
+      margin-left: 24px;
+      margin-bottom: 5px;
+      width: calc(53 * 13px);
+      justify-content: space-between;
+
+      .month {
+        color: #7d8590;
+        font-size: 12px;
+      }
+    }
+
+    .days-and-squares {
+      display: flex;
+
+      .days-of-week {
+        display: flex;
+        flex-direction: column;
+        margin-right: 5px;
+        justify-content: space-between;
+
+        .day {
+          height: 15px;
+          color: #7d8590;
+          font-size: 12px;
+        }
+      }
+
+      .squares-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(53 * 13px);
+        gap: 2px;
+
+        .contribution-square {
+          width: 10px;
+          height: 10px;
+          border-radius: 2px;
+          border: 1px solid #30363d;
+
+          &.level-0 { background-color: #161b22; }
+          &.level-1 { background-color: #0e4429; }
+          &.level-2 { background-color: #006d32; }
+          &.level-3 { background-color: #26a641; }
+          &.level-4 { background-color: #39d353; }
+        }
+      }
+    }
+
+    .graph-footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      color: #7d8590;
+      font-size: 12px;
+
+      .color-scale {
+        display: flex;
+        align-items: center;
+
+        .scale-square {
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+          margin-right: 2px;
+          border-radius: 2px;
+          border: 1px solid rgba(27, 31, 35, 0.06);
+
+          &.level-0 { background-color: #161b22; }
+          &.level-1 { background-color: #0e4429; }
+          &.level-2 { background-color: #006d32; }
+          &.level-3 { background-color: #26a641; }
+          &.level-4 { background-color: #39d353; }
+        }
+      }
+    }
+  }
+
+  .yearSelector {
+    .yearSelectorButton {
+      border: none;
+      padding: 5px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+      background-color: transparent;
+      color: #c9d1d9;
+
+      &:hover {
+        background-color: #30363d;
+      }
+      
+      &.active {
+        background-color: #238636;
+        color: #fff;
+      }
+    }
+  }
+
+  .contribution-activity {
+    margin-top: 30px;
+
+    .activity-title {
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .activity-list {
+      padding-top: 10px;
+
+      .activity-month {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .month-name {
+          font-size: 14px;
+          color: #8b949e;
+          margin-right: 10px;
+          margin-bottom: 0;
+          font-weight: 400;
+        }
+
+        .month-line {
+          flex: 1;
+          height: 1px;
+          background-color: #30363d;
+        }
+      }
+
+      .activity-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+        position: relative;
+
+        .activity-icon {
+          margin-right: 16px;
+          font-size: 16px;
+          color: #8b949e;
+          position: relative;
+          z-index: 1;
+
+          .icon-container {
+            background-color: #30363d;
+            border-radius: 50%;
+            padding: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+          }
+        }
+
+        .activity-details {
+          flex: 1;
+          position: relative;
+
+          .activity-description {
+            font-size: 14px;
+            margin-bottom: 5px;
+          }
+
+          .activity-meta {
+            display: flex;
+            align-items: center;
+
+            .repository-name {
+              color: #58a6ff;
+              font-size: 12px;
+              margin-right: 5px;
+              font-weight: 600;
+            }
+
+            .commit-count, .language-tag {
+              background-color: #238636;
+              color: #fff;
+              padding: 2px 5px;
+              border-radius: 10px;
+              font-size: 12px;
+              font-weight: 500;
+            }
+
+            .language-tag {
+              background-color: #3178c6;
+              margin-right: 5px;
+            }
+
+            .date {
+              color: #8b949e;
+              font-size: 12px;
+            }
+          }
+
+          .activity-line {
+            position: absolute;
+            left: -24px;
+            top: 24px;
+            bottom: -24px;
+            width: 2px;
+            background-color: #30363d;
+          }
+        }
+
+        .activity-menu {
+          position: absolute;
+          right: 0;
+          top: 0;
+          color: #8b949e;
+          font-size: 16px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .show-more-container {
+      text-align: center;
+      margin-top: 20px;
+
+      .show-more-button {
+        background-color: #21262d;
+        color: #c9d1d9;
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        padding: 5px 16px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    }
+  }
+}

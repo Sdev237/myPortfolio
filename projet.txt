@@ -1,0 +1,30 @@
+Voici quelques idées de projets Next.js avec TypeScript que vous pourriez ajouter à votre portfolio, en fonction des secteurs que vous visez :
+
+Banque
+Application de gestion de comptes bancaires :
+Fonctionnalités : Consultation de solde, historique des transactions, virements entre comptes.
+Technologies : Next.js, TypeScript, API REST pour les données bancaires, Authentification OAuth.
+
+
+E-commerce
+Site de commerce électronique :
+Fonctionnalités : Catalogue de produits, panier d’achat, paiement en ligne avec intégration Stripe.
+Technologies : Next.js, TypeScript, Stripe pour les paiements, Tailwind CSS pour le design1.
+
+
+Énergie
+Tableau de bord de consommation énergétique :
+Fonctionnalités : Suivi de la consommation d’énergie en temps réel, graphiques interactifs, alertes de consommation élevée.
+Technologies : Next.js, TypeScript, Chart.js pour les graphiques, WebSockets pour les mises à jour en temps réel.
+
+
+Assurance
+Portail client pour une compagnie d’assurance :
+Fonctionnalités : Consultation des polices d’assurance, déclaration de sinistres, suivi des réclamations.
+Technologies : Next.js, TypeScript, GraphQL pour les requêtes de données, Auth0 pour l’authentification.
+
+
+Transport
+Application de suivi de flotte de véhicules :
+Fonctionnalités : Suivi GPS des véhicules, gestion des itinéraires, alertes de maintenance.
+Technologies : Next.js, TypeScript, Mapbox pour les cartes, MQTT pour la communication en temps réel.

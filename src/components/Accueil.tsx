@@ -53,8 +53,8 @@ const Accueil = () => {
               Passionné du développement logiciel et des nouvelles technologies, j’ai la chance d'avoir pu développer mes compétences au sein de nombreuses entreprise a l’exemple de Orange Cameroun, HUGO Company LTD, CENADI et MODRY Sarl
               </p>
 
-              <h3>STACK</h3>
-              <Row className="mt-3">
+              <h6 className="mt-3">Stacks</h6>
+              <Row >
                 {['ReactJS', 'Next.js', 'TailwindCSS', 'Bootstrap', 'Laravel', 'Vitest'].map((competence) => (
                   <Col md={2} key={competence}>
                     {/* <img src={`chemin/vers/logo-${competence}.svg`} alt={competence} /> */}
@@ -85,7 +85,7 @@ const Accueil = () => {
               </Row>
             </Col>
             
-            <h6 className='mx-2'>Contributions</h6>
+            <h6 className='mx-2'>Projets</h6>
             <aside className='p-3 mb-4' style={{border: '1px solid #333', borderRadius: '0.4rem'}}>
                 <ContributionGithub />
             </aside>
