@@ -26,8 +26,7 @@ export default function Home() {
 
   return (
     <main  className={`app ${theme} ${langue} ${langueProfil}`}>
-      <Navbar toggleTheme={toggleTheme} toggleLangue={toggleLangue} />
-      
+      <Navbar toggleTheme={toggleTheme} toggleLangue={toggleLangue} />     
       <Accueil />
       <p>Hi sap, how's it going !!</p>
     </main>

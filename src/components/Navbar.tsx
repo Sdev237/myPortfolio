@@ -7,7 +7,11 @@ import { faSun, faMoon, faUser, faHome, faLightbulb } from '@fortawesome/free-so
 import './Navbar.scss';
 import Link from 'next/link';
 
-const Navbar = ({ toggleTheme, toggleLangue }) => {
+interface NavbarProps {
+  toggleTheme: () => void;
+  toggleLangue: () => void;
+} 
+const Navbar: React.FC<NavbarProps> = ({ toggleTheme, toggleLangue })=> {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [langue, setLangue] = useState('Fr'); 
   const [profilLink, setProfilLink] = useState('/profil');
@@ -25,12 +29,12 @@ const Navbar = ({ toggleTheme, toggleLangue }) => {
     toggleLangue();
   };
 
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isMobile = useMediaQuery({ maxWidth: 820 });
 
   return (
     <section className='nav'>
-      <nav className="navi">
-        <div  className="navbar-container">
+      <nav className={`navi ${isMobile ? 'mobile' : ''}`}>
+        <div  className="">
           <div>
             <Link href="">
               <FontAwesomeIcon icon={faHome} />

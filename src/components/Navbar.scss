@@ -44,14 +44,17 @@
     }
   }
 
-  @media screen and (max-width: 1325px) {
-    width: 47%;
+  @media screen and (max-width: 1328px) {
+    position: fixed;
+    margin: 0;
+    top: 0;         
+    width: 100vw;    
   }
 
   &.mobile {
     
     margin: 0;
-    width: 100%;
+    width: 100vw;
     border-radius: 0%;
     justify-content: center; 
     margin-top: 0;
