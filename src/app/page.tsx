@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useState } from 'react';
-import styles from "./page.module.css";
 import Navbar from './../components/Navbar';
 import Accueil from '@/components/Accueil';
-import NavGithub from '@/components/NavGithub';
+import BanqueApp from '@/projets/banque';
 
 
 export default function Home() {
@@ -28,7 +27,7 @@ export default function Home() {
     <main  className={`app ${theme} ${langue} ${langueProfil}`}>
       <Navbar toggleTheme={toggleTheme} toggleLangue={toggleLangue} />     
       <Accueil />
-      <p>Hi sap, how's it going !!</p>
+      
     </main>
   );
 }

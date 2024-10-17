@@ -91,11 +91,6 @@ const Accueil = () => {
             </aside>
           </Col> 
         </Row>
-        <Row>
-          <Col md={9}>
-
-          </Col>
-        </Row>
       </Container>
       
     </div>

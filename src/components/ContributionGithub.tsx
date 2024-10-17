@@ -69,7 +69,7 @@ const ContributionGithub: React.FC = () => {
   };
 
   const daysOfWeek: string[] = ['Mon', 'Wed', 'Fri'];
-  const months: string[] = ['Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'];
+  const months: string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
   const [activeYear, setActiveYear] = useState('2024');
   const years = ['2024', '2023', '2022'];
