@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Navbar from './../components/Navbar';
 import Accueil from '@/components/Accueil';
-import BanqueApp from '@/projets/banque';
+//import BanqueApp from '@/projets/banque';
 
 
 export default function Home() {

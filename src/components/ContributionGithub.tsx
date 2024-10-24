@@ -14,22 +14,12 @@ const ContributionGithub = () => {
 export default ContributionGithub;*/}
 
 import React, { useState } from 'react';
-import { VscGitCommit, VscKebabVertical, VscRepo, VscRepoForked } from 'react-icons/vsc';
 import './ContributionGithub.scss';
 interface Contribution {
   date: string;
   count: number;
 }
 
-interface ContributionActivity {
-  type: 'commits' | 'repository';
-  count?: number;
-  repository: string;
-  description: string;
-  details?: string;
-  date: string;
-  language?: string;
-}
 
 const ContributionGithub: React.FC = () => {
   const [showYearSelector, setShowYearSelector] = useState(false);
@@ -68,7 +58,7 @@ const ContributionGithub: React.FC = () => {
     return '#39d353';
   };
 
-  const daysOfWeek: string[] = ['Mon', 'Wed', 'Fri'];
+  const daysOfWeek: string[] = ['Orange', 'Hugo', 'CENADI'];
   const months: string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
   const [activeYear, setActiveYear] = useState('2024');
@@ -82,31 +72,16 @@ const ContributionGithub: React.FC = () => {
     return date.toISOString().split('T')[0];
   });
 
-  const contributionActivity: ContributionActivity[] = [
-    {
-      type: 'commits',
-      count: 2,
-      repository: 'Sdev237/myPortfolio',
-      description: 'Created 2 commits in 1 repository',
-      details: '2 commits',
-      date: 'October 2024'
-    },
-    {
-      type: 'repository',
-      repository: 'Sdev237/myPortfolio',
-      description: 'Created 1 repository',
-      language: 'TypeScript',
-      date: 'Oct 15'
-    }
-  ];
-
   return (
     <div className="contribution-github">
       <div className="contribution-header">
         <span className="contribution-count">{totalContributions} contributions in the last year</span>
-        <div className="contribution-settings">Contribution settings</div>
+        <div className="contribution-settings">
+          Contribution settings
+          <span style={{marginLeft: '5px', textAlign: 'center'}}>▼</span>
+        </div>
       </div>
-      <div className="contribution-content">
+      <div className="contribution-content p-3" style={{border: '1px solid #333', borderRadius: '0.4rem', overflow: 'auto'}}>
         <div className="contribution-graph">
           <div className="months-container" style={{ width: `${gridWidth}px`}}>
             {months.map((month, index) => (
@@ -144,62 +119,18 @@ const ContributionGithub: React.FC = () => {
           </div>
         </div>
         <div className='yearSelector'>
-      {years.map((year) => (
-        <button 
-          key={year}
-          className={`yearSelectorButton ${year === activeYear ? 'active' : ''}`}
-          onClick={() => setActiveYear(year)}
-        >
-          {year}
-        </button>
-      ))}
-    </div>
-      </div>
-      
-      <div className="contribution-activity">
-        <h2 className="activity-title">Contribution activity</h2>
-        <div className="activity-list">
-          <div className="activity-month">
-            <h5 className="month-name">October 2024</h5>
-            <div className="month-line" />
-          </div>
-          {contributionActivity.map((activity, index) => (
-            <div key={index} className="activity-item">
-              <div className="activity-icon">
-                <div className="icon-container">
-                  {activity.type === 'commits' ? <VscRepoForked /> : <VscRepo />}
-                </div>
-              </div>
-              <div className="activity-details">
-                <div className="activity-description">
-                  {activity.type === 'commits' 
-                    ? `Created ${activity.details} in ${activity.repository}`
-                    : `Created repository ${activity.repository}`
-                  }
-                </div>
-                <div className="activity-meta">
-                  <span className="repository-name">{activity.repository}</span>
-                  {activity.type === 'commits' ? (
-                    <span className="commit-count">{activity.details}</span>
-                  ) : (
-                    <>
-                      <span className="language-tag">{activity.language}</span>
-                      <span className="date">{activity.date}</span>
-                    </>
-                  )}
-                </div>
-                {index < contributionActivity.length - 1 && <div className="activity-line" />}
-              </div>
-              <div className="activity-menu">
-                <VscKebabVertical />
-              </div>
-            </div>
+          {years.map((year) => (
+          <button 
+            key={year}
+            className={`yearSelectorButton ${year === activeYear ? 'active' : ''}`}
+            onClick={() => setActiveYear(year)}
+          >
+            {year}
+          </button>
           ))}
         </div>
-        <div className="show-more-container">
-          <button className="show-more-button">Show more activity</button>
-        </div>
       </div>
+      
     </div>
   );
 };
