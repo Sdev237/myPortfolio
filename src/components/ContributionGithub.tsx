@@ -58,11 +58,16 @@ const ContributionGithub: React.FC = () => {
     return '#39d353';
   };
 
-  const daysOfWeek: string[] = ['Orange', 'Hugo', 'CENADI'];
+  const daysOfWeek: string[] = ['Lun', 'Jeu', 'Dim'];
   const months: string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
   const [activeYear, setActiveYear] = useState('2024');
   const years = ['2024', '2023', '2022'];
+  const company = [
+    { name: 'Orange Digital Center', logo: 'https://c.woopic.com/logo-orange.png', poste: 'Analyste Programmeur', date: '2022-2023' },
+    { name: 'Hugo Company LTD', poste: 'Gestionnaire du parc informatique', date: '2020-2022' },
+    { name: 'CENADI',logo:"https://i0.wp.com/www.cenadi.cm/wp-content/uploads/2020/09/armoiries_logo_cenadi.png?fit=180%2C80&amp;ssl=1", poste: 'Développeur Full Stack', date: '2018' }
+  ];
 
   const gridWidth: number = 53 * 13; // 53 semaines * 13px par case
 
@@ -71,13 +76,16 @@ const ContributionGithub: React.FC = () => {
     date.setDate(date.getDate() + i);
     return date.toISOString().split('T')[0];
   });
+  const numberOfYears = years.length;
 
   return (
     <div className="contribution-github">
       <div className="contribution-header">
-        <span className="contribution-count">{totalContributions} contributions in the last year</span>
+        <span className="contribution-count opacity-75">
+          {totalContributions} contributions au cours de la dernière année
+        </span>
         <div className="contribution-settings">
-          Contribution settings
+          Paramètres de contribution
           <span style={{marginLeft: '5px', textAlign: 'center'}}>▼</span>
         </div>
       </div>
@@ -108,13 +116,13 @@ const ContributionGithub: React.FC = () => {
             </div>
           </div>
           <div className="graph-footer">
-            <span className="learn-more">Learn how we count contributions</span>
+            <span className="learn-more">Découvrez comment nous comptons les contributions</span>
             <div className="color-scale">
-              <span>Less</span>
+              <span>Moins</span>
               {[0, 1, 2, 3, 4].map((level) => (
                 <span key={level} className={`scale-square level-${level}`} />
               ))}
-              <span>More</span>
+              <span>Plus</span>
             </div>
           </div>
         </div>
@@ -131,8 +139,30 @@ const ContributionGithub: React.FC = () => {
         </div>
       </div>
       
+      <div className="contribution-header">
+        <span className="contribution-count pt-3 ">
+          Experience Professionnelle
+        </span>
+      </div>
+      <div className="contribution-content p-1" style={{borderRadius: '0.4rem', overflow: 'auto'}}>
+        <div className='yearSelector d-flex flex-wrap justify-content-between align-items-center w-100 gap-3'>
+          {company.map((comp, idx) => (
+            <div key={idx} className='text-center'>
+              <div className="yearName col-12 col-md-12 col-lg-12 text-start d-flex flex-column z-1">
+                <div className="d-flex align-items-center">
+                  {comp.logo && <img src={comp.logo} alt={comp.name} width={40} height={30} className='me-2'/>}
+                  {comp.name}
+                </div>
+                <span className='opacity-50'>{comp.poste}</span>
+              </div>
+              <div className="yearDate text-start opacity-75">{comp.date}</div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
 
 export default ContributionGithub;
+
