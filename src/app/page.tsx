@@ -3,9 +3,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Accueil from '@/components/Accueil';
-//import BanqueApp from '@/projets/banque';
-
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Home() {
 
   const [theme, setTheme] = useState('dark');
@@ -27,7 +25,6 @@ export default function Home() {
     <main  className={`app ${theme} ${langue} ${langueProfil}`}>
       <Navbar toggleTheme={toggleTheme} toggleLangue={toggleLangue} />     
       <Accueil />
-      
     </main>
   );
 }
