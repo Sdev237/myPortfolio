@@ -1,10 +1,11 @@
-import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Container, Row, Col, Card, Button, Modal, Form } from 'react-bootstrap';
 import { FaLinkedin, FaGithub, FaFileAlt, FaCode, FaPhp, FaReact, FaDocker, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 import { SiNextdotjs, SiTailwindcss } from 'react-icons/si';
 import './Accueil.scss';
 import ContributionGithub from './ContributionGithub';
 import { FunProjet } from './FunProjet';
+import Contact from './Contact';
 
 interface Stack {
   icon: JSX.Element;
@@ -66,14 +67,45 @@ const ProfileSection = () => (
   </Row>
 );
 
-const ProfileInfo = () => (
+const ProfileInfo = () => {
+  
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.target as HTMLFormElement);
+
+    formData.append("access_key", "4cf07025-30c0-4fe1-8c8a-5008383abfb4");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+    }
+  };
+
+return(
   <div className="row col-lg-12">
     <div className="avatar-container col-md-4 col-lg-12">
       <img className="round-avatar" role="img" aria-label="Avatar de Jedeon Sap" />
     </div>
     <div className="col-md-8 col-lg-12 d-flex flex-column align-items-center gap-2 justify-content-xl-start">
       <h5 className="my-3 mx-md-4 mx-lg-0 col-md-8 col-lg-12 text-center">
-        Jedeon Sap<a className="btn contactMe mx-3">Contact Me</a>
+        Jedeon Sap<a className="btn contactMe mx-3"  onClick={handleShow} >Contact Me🤝</a>
       </h5>
       <aside className="mx-md-4 mx-lg-0 col-lg-12 text-lg-start align-items-lg-start">
         <Card.Subtitle className="py-2 col-md-12 col-lg-12 competence">Développeur Full Stack</Card.Subtitle>
@@ -83,8 +115,61 @@ const ProfileInfo = () => (
         </div>
       </aside>
     </div>
+
+
+    <Modal
+        show={show}
+        onHide={handleClose}
+        keyboard={false}
+        className="home"  // Utilise la même classe que votre composant principal
+      >
+      <Modal.Header closeButton>
+        <Modal.Title>Contact Me</Modal.Title>
+      </Modal.Header>
+      <Form onSubmit={onSubmit}>
+        <Modal.Body>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
+            <Form.Label>Name</Form.Label>
+              <Form.Control
+                type="text"
+                name="name"
+                placeholder="your name"
+                autoFocus
+              />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control
+              type="email"
+              name="email"
+              placeholder="name@example.com"
+            />
+          </Form.Group>
+          <Form.Group
+            className="mb-3"
+            controlId="exampleForm.ControlTextarea1"
+          >
+            <Form.Label>Message</Form.Label>
+            <Form.Control 
+              as="textarea" 
+              name="message" 
+              rows={3}
+            />
+          </Form.Group>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button type="submit" variant="primary">Send</Button>
+        </Modal.Footer>
+      </Form>
+    </Modal>
+
   </div>
-);
+
+  
+)
+};
+
+
 
 const UsefulLinks = () => (
   <aside className="my-4 my-lg-0 link">

@@ -30,7 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, toggleLangue }) => {
 
   return (
     <section className='nav-section row'>
-      <nav className={`navi ${isMobile ? 'mobile' : ''} col-xs-12 col-sm-12 col-md-12 col-lg-12`}>
+      <nav className={`navi ${isMobile ? 'mobile' : ''} col-xs-12 col-sm-12 col-md-12 col-lg-auto px-lg-5`}>
         <div>
           <Link href="/">
             <FontAwesomeIcon icon={faHome} />
