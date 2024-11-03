@@ -125,7 +125,7 @@ return(
         
       >
       <Modal.Header closeButton style={{backgroundColor: '#0d1117', color: '#fff'}}>
-        <Modal.Title>Contact Me</Modal.Title>
+        <Modal.Title>Me Contacter</Modal.Title>
       </Modal.Header>
       <Form 
         onSubmit={onSubmit} 
@@ -133,21 +133,21 @@ return(
       >
         <Modal.Body>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput2" >
-            <Form.Label>Name</Form.Label>
+            <Form.Label>Nom</Form.Label>
               <Form.Control
                 type="text"
                 name="name"
-                placeholder="your name"
+                placeholder="Votre nom"
                 autoFocus
                 style={{backgroundColor: '#0d1117', color: '#fff'}} 
               />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Email address</Form.Label>
+            <Form.Label>Addresse email</Form.Label>
             <Form.Control
               type="email"
               name="email"
-              placeholder="name@example.com"
+              placeholder="nom@exemple.com"
               style={{backgroundColor: '#0d1117', color: '#fff'}} 
             />
           </Form.Group>
@@ -160,12 +160,13 @@ return(
               as="textarea" 
               name="message" 
               rows={3}
+              placeholder='Entrer votre message'
               style={{backgroundColor: '#0d1117', color: '#fff'}} 
             />
           </Form.Group>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="submit" variant="primary">Send</Button>
+          <Button type="submit" variant="primary">Envoyer</Button>
         </Modal.Footer>
       </Form>
     </Modal>

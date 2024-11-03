@@ -35,7 +35,7 @@ const ContributionGithub: React.FC = () => {
       const randomFactor: number = Math.random();
       let count: number = 0;
       if (randomFactor > 0.7) {
-        count = Math.min(Math.floor(Math.random() * 8) + 1, maxContributions - totalContributions);
+        count = Math.min(Math.floor(Math.random() * 4) + 1, maxContributions - totalContributions);
       }
       totalContributions += count;
       contributions.push({
@@ -52,9 +52,9 @@ const ContributionGithub: React.FC = () => {
 
   const getColor = (count: number): string => {
     if (count === 0) return '#161b22';
-    if (count < 3) return '#0e4429';
-    if (count < 6) return '#006d32';
-    if (count < 9) return '#26a641';
+    if (count < 2) return '#0e4429';
+    if (count < 5) return '#006d32';
+    if (count < 8) return '#26a641';
     return '#39d353';
   };
 
@@ -82,7 +82,7 @@ const ContributionGithub: React.FC = () => {
     <div className="contribution-github">
       <div className="contribution-header">
         <span className="contribution-count opacity-75">
-          {totalContributions} contributions au cours de la dernière année
+          Expérience de travail 
         </span>
         <div className="contribution-settings">
           Paramètres de contribution
@@ -116,7 +116,7 @@ const ContributionGithub: React.FC = () => {
             </div>
           </div>
           <div className="graph-footer">
-            <span className="learn-more">Découvrez comment nous comptons les contributions</span>
+            <span className="learn-more">{totalContributions} contributions au cours de la dernière année</span>
             <div className="color-scale">
               <span>Moins</span>
               {[0, 1, 2, 3, 4].map((level) => (
