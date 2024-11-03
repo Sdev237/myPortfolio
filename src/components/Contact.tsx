@@ -19,6 +19,7 @@ function Contact() {
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
+        style={{backgroundColor: '#0d1117'} }
       >
         <Modal.Header closeButton>
           <Modal.Title>Modal title</Modal.Title>

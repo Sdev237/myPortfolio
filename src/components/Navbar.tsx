@@ -29,8 +29,8 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, toggleLangue }) => {
   const isMobile = useMediaQuery({ maxWidth: 820 });
 
   return (
-    <section className='nav-section row'>
-      <nav className={`navi ${isMobile ? 'mobile' : ''} col-xs-12 col-sm-12 col-md-12 col-lg-auto px-lg-5`}>
+    <section className='row'>
+      <nav className={`navi ${isMobile ? 'mobile' : ''} col-xs-12 col-sm-12 col-md-12 col-lg-auto px-lg-5`} style={{boxShadow: '9px 10px 9px 0 rgba(0,0,0,0.8)'}}>
         <div>
           <Link href="/">
             <FontAwesomeIcon icon={faHome} />

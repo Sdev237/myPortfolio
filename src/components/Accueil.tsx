@@ -23,9 +23,9 @@ const Accueil = () => {
   ];
 
   return (  
-    <div className="home">
+    <div className="home ">
       <Container>
-        <Row className="mt-2">
+        <Row className="mt-2 ">
           <Col xs={12} sm={12} md={12} lg={3} className="profil">
             <ProfileSection />
           </Col>   
@@ -121,20 +121,25 @@ return(
         show={show}
         onHide={handleClose}
         keyboard={false}
-        className="home"  // Utilise la même classe que votre composant principal
+        className="home"
+        
       >
-      <Modal.Header closeButton>
+      <Modal.Header closeButton style={{backgroundColor: '#0d1117', color: '#fff'}}>
         <Modal.Title>Contact Me</Modal.Title>
       </Modal.Header>
-      <Form onSubmit={onSubmit}>
+      <Form 
+        onSubmit={onSubmit} 
+        style={{backgroundColor: '#0d1117', color: '#fff'}} 
+      >
         <Modal.Body>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput2" >
             <Form.Label>Name</Form.Label>
               <Form.Control
                 type="text"
                 name="name"
                 placeholder="your name"
                 autoFocus
+                style={{backgroundColor: '#0d1117', color: '#fff'}} 
               />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -143,6 +148,7 @@ return(
               type="email"
               name="email"
               placeholder="name@example.com"
+              style={{backgroundColor: '#0d1117', color: '#fff'}} 
             />
           </Form.Group>
           <Form.Group
@@ -154,6 +160,7 @@ return(
               as="textarea" 
               name="message" 
               rows={3}
+              style={{backgroundColor: '#0d1117', color: '#fff'}} 
             />
           </Form.Group>
         </Modal.Body>
@@ -168,8 +175,6 @@ return(
   
 )
 };
-
-
 
 const UsefulLinks = () => (
   <aside className="my-4 my-lg-0 link">
