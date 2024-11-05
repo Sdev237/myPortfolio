@@ -63,11 +63,6 @@ const ContributionGithub: React.FC = () => {
 
   const [activeYear, setActiveYear] = useState('Orange');
   const years = ['Orange', 'Hugo Company', 'CENADI'];
-  const company = [
-    { name: 'Orange Digital Center', logo: 'https://c.woopic.com/logo-orange.png', poste: 'Analyste Programmeur', date: '2022-2023' },
-    { name: 'Hugo Company LTD', logo: '../app/fonts/hugo.png', poste: 'Gestionnaire du parc informatique', date: '2020-2022' },
-    { name: 'CENADI',logo:"https://i0.wp.com/www.cenadi.cm/wp-content/uploads/2020/09/armoiries_logo_cenadi.png?fit=180%2C80&amp;ssl=1", poste: 'Développeur Full Stack', date: '2018' }
-  ];
 
   const gridWidth: number = 53 * 13; // 53 semaines * 13px par case
 
@@ -81,7 +76,7 @@ const ContributionGithub: React.FC = () => {
   return (
     <div className="contribution-github">
       <div className="contribution-header">
-        <span className="contribution-count opacity-75">
+        <span className="contribution-count ">
           Expérience de travail 
         </span>
         <div className="contribution-settings">
@@ -139,27 +134,6 @@ const ContributionGithub: React.FC = () => {
         </div>
       </div>
       
-      <div className="contribution-header">
-        <span className="contribution-count pt-3 ">
-          Experience Professionnelle
-        </span>
-      </div>
-      <div className="contribution-content p-1" style={{borderRadius: '0.4rem', overflow: 'auto'}}>
-        <div className='yearSelector d-flex flex-wrap justify-content-between align-items-center w-100 gap-3'>
-          {company.map((comp, idx) => (
-            <div key={idx} className='text-center'>
-              <div className="yearName col-12 col-md-12 col-lg-12 text-start d-flex flex-column z-1">
-                <div className="d-flex align-items-center">
-                  {comp.logo && <img src={comp.logo} alt={comp.name} width={40} height={30} className='me-2'/>}
-                  {comp.name}
-                </div>
-                <span className='opacity-50'>{comp.poste}</span>
-              </div>
-              <div className="yearDate text-start opacity-75">{comp.date}</div>
-            </div>
-          ))}
-        </div>
-      </div>
     </div>
   );
 };

@@ -6,6 +6,7 @@ import './Accueil.scss';
 import ContributionGithub from './ContributionGithub';
 import { FunProjet } from './FunProjet';
 import Contact from './Contact';
+import { EnterpriseExperience } from './EnterpriseExperience';
 
 interface Stack {
   icon: JSX.Element;
@@ -37,6 +38,13 @@ const Accueil = () => {
             <aside className="mb-4">
               <ContributionGithub />
             </aside>
+            
+            <div className=''>
+              <h6>Experience Professionnelle</h6>
+              <aside className="mb-2">
+                <EnterpriseExperience />
+              </aside>
+            </div>
             
             <h6>Fun Projets</h6>
             <aside className="mb-4 px-4">
@@ -121,9 +129,11 @@ return(
         show={show}
         onHide={handleClose}
         keyboard={false}
-        className="home"
+        className="home "
         
       >
+        <div 
+        style={{ border: '0.01em solid #333', borderRadius:'1%' }}>
       <Modal.Header closeButton style={{backgroundColor: '#0d1117', color: '#fff'}}>
         <Modal.Title>Me Contacter</Modal.Title>
       </Modal.Header>
@@ -131,7 +141,7 @@ return(
         onSubmit={onSubmit} 
         style={{backgroundColor: '#0d1117', color: '#fff'}} 
       >
-        <Modal.Body>
+        <Modal.Body >
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput2" >
             <Form.Label>Nom</Form.Label>
               <Form.Control
@@ -169,6 +179,7 @@ return(
           <Button type="submit" variant="primary">Envoyer</Button>
         </Modal.Footer>
       </Form>
+      </div>
     </Modal>
 
   </div>
@@ -241,9 +252,5 @@ const AboutSection = ({ stacks }: { stacks: Stack[] }) => (
     </Col>
   </>
 );
-
-
-
-{}
 
 export default Accueil;

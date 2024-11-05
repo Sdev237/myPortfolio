@@ -1,0 +1,25 @@
+.box {
+  border-radius: 8px;
+  border: 1px solid #333;
+  padding: 24px;
+  min-width: 18em;
+  &:hover {
+    cursor: pointer;
+    transition: 0.4s all;
+    border: 1px solid rgba(59, 121, 246, 0.15);
+  }
+}
+
+.name {
+  font-weight: 500;
+}
+
+.date {
+  background-color: rgba(59, 121, 246, 0.15);
+  color: #2870ff;
+  padding: 5px 8px;
+  border-radius: 8px;
+  font-weight: 900;
+  font-size: 0.8em;
+  max-width: 9em;
+}
