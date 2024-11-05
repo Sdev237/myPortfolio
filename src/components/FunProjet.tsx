@@ -2,6 +2,17 @@ import React from 'react'
 import { VscRepo } from 'react-icons/vsc'
 import './FunProjet.scss'
 
+
+const currentDate = new Date(); 
+const currentMonth = currentDate.getMonth();
+const currentYear = currentDate.getFullYear();
+const monthNames = [
+  "Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
+  "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"
+];
+
+const monthInFrench = monthNames[currentMonth]; 
+
 interface ContributionActivity {
   type: 'commits' | 'repository';
   count?: number;
@@ -11,6 +22,8 @@ interface ContributionActivity {
   date: string;
   language?: string;
   projet1?: string;
+  projet2?: string;
+  link?: string;
 }
 
 const contributionActivity: ContributionActivity[] = [
@@ -19,14 +32,15 @@ const contributionActivity: ContributionActivity[] = [
     count: 2,
     repository: 'Sdev237/Landing Page',
     description: 'Created 8 commits in 1 repository',
-    details: '8 commits',
+    details: '12 commits',
     projet1: 'https://landing-page-432f4.web.app',
-    date: 'October 2024'
+    date: 'Octob 2024'
   },
   {
     type: 'repository',
-    repository: 'Sdev237/myPortfolio',
+    repository: 'Sdev237/TaskFlow',
     description: 'Created 1 repository',
+    projet2: 'https://todo-list-six-orcin.vercel.app',
     language: 'TypeScript',
     date: 'Oct 15'
   }
@@ -55,7 +69,7 @@ const ActivityItem = ({ activity, isLast }: { activity: ContributionActivity, is
         }
       </div>
       <div className="activity-meta">
-        <a href={activity.projet1}>
+        <a href={activity.type === 'commits' ? activity.projet1 : activity.projet2 } >
           <span className="repository-name">
             <span style={{color: '#a8c2ab'}}>View the result of the page : </span>
             {activity.repository}
@@ -86,7 +100,7 @@ export const FunProjet = () => {
       <h2 className="activity-title"></h2>
       <div className="activity-list">
         <div className="activity-month">
-          <h5 className="month-name">October 2024</h5>
+          <h5 className="month-name">{monthInFrench} {currentYear}</h5>
           <div className="month-line" />
         </div>
         {contributionActivity.map((activity, index) => (

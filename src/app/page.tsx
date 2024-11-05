@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Accueil from '@/components/Accueil';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Footer } from '@/components/Footer';
 export default function Home() {
 
   const [theme, setTheme] = useState('dark');

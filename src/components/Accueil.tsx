@@ -7,6 +7,7 @@ import ContributionGithub from './ContributionGithub';
 import { FunProjet } from './FunProjet';
 import Contact from './Contact';
 import { EnterpriseExperience } from './EnterpriseExperience';
+import { Footer } from './Footer';
 
 interface Stack {
   icon: JSX.Element;
@@ -50,11 +51,15 @@ const Accueil = () => {
             <aside className="mb-4 px-4">
               <FunProjet />
             </aside>
+            <aside className="mb-4 px-4">
+              <Footer />
+            </aside>
           </Col> 
         </Row>
       </Container>
     </div>
   );
+  
 };
 
 const ProfileSection = () => (
@@ -123,17 +128,13 @@ return(
         </div>
       </aside>
     </div>
-
-
     <Modal
         show={show}
         onHide={handleClose}
         keyboard={false}
-        className="home "
-        
+        className="home "      
       >
-        <div 
-        style={{ border: '0.01em solid #333', borderRadius:'1%' }}>
+      <div style={{ border: '0.01em solid #333', borderRadius:'1%' }}>
       <Modal.Header closeButton style={{backgroundColor: '#0d1117', color: '#fff'}}>
         <Modal.Title>Me Contacter</Modal.Title>
       </Modal.Header>
@@ -181,10 +182,7 @@ return(
       </Form>
       </div>
     </Modal>
-
-  </div>
-
-  
+  </div>  
 )
 };
 

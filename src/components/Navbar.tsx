@@ -35,7 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, toggleLangue }) => {
           <Link href="/">
             <FontAwesomeIcon icon={faHome} />
           </Link>
-          <Link href="/projects">
+          <Link href="/#projects">
             <FontAwesomeIcon icon={faLightbulb} />
           </Link>
           <a className='toggle px-3 cursor-pointer' onClick={handleLanguageChange}>
