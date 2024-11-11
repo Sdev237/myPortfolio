@@ -124,7 +124,7 @@ return(
         <Card.Subtitle className="py-2 col-md-12 col-lg-12 competence">Développeur Full Stack</Card.Subtitle>
         <div className="d-flex flex-column align-items-start my-3 gap-2">
           <h6 className="justify-content-xl-start opacity-75"><FaMapMarkerAlt className="me-2" />Ville-Marie, Montréal, QC</h6>
-          <h6 className="justify-content-xl-start opacity-75"><FaEnvelope className="me-2" />jedeon.lontchigmail.com</h6>
+          <h6 className="justify-content-xl-start opacity-75"><FaEnvelope className="me-2" />jedeon.lontchi@gmail.com</h6>
         </div>
       </aside>
     </div>
