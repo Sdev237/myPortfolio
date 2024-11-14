@@ -71,7 +71,7 @@ const ActivityItem = ({ activity, isLast }: { activity: ContributionActivity, is
       <div className="activity-meta">
         <a href={activity.type === 'commits' ? activity.projet1 : activity.projet2 } >
           <span className="repository-name">
-            <span style={{color: '#a8c2ab'}}>View the result of the page : </span>
+            <span style={{color: '#a8c2ab'}}>Voir le résultat de la page : </span>
             {activity.repository}
           </span>
           {activity.type === 'commits' ? (
@@ -112,7 +112,7 @@ export const FunProjet = () => {
         ))}
       </div>
       <div className="show-more-container p-4">
-        <button className="show-more-button">Show more activity</button>
+        <button className="show-more-button">Afficher plus d'activité</button>
       </div>
     </div>
   )
