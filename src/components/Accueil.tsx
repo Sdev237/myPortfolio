@@ -5,7 +5,6 @@ import { SiNextdotjs, SiTailwindcss } from 'react-icons/si';
 import './Accueil.scss';
 import ContributionGithub from './ContributionGithub';
 import { FunProjet } from './FunProjet';
-import Contact from './Contact';
 import { EnterpriseExperience } from './EnterpriseExperience';
 import { Footer } from './Footer';
 
