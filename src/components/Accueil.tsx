@@ -227,7 +227,7 @@ const AboutSection = ({ stacks }: { stacks: Stack[] }) => (
   <>
     <h6 className="mx-2 text-center text-lg-start d-none d-lg-block">Apropos de moi</h6>
     <Col className="bio px-3 py-4">             
-      <h1 className="mb-4 text-center text-lg-start" style={{opacity: '1'}}>Hi THERE👋 HOW'S IT GOING</h1>
+      <h1 className="mb-4 text-center text-lg-start" style={{opacity: '1'}}>Hi THERE👋HOW'S IT GOING</h1>
       <h2 className="text-center text-lg-start">Bienvenue Sur Mon Portfolio !</h2>
       <h4 className="text-center text-lg-start opacity-95">Ça vous dit de travailler ensemble sur des projets amusants ?</h4>
       <p className="text-center text-lg-start opacity-75" style={{opacity: '1'}}>

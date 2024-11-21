@@ -26,7 +26,7 @@ function Contact() {
         </Modal.Header>
         <Modal.Body>
           I will not close if you click outside me. Do not even try to press
-          escape key.
+          escape key
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
