@@ -301,7 +301,7 @@ const AboutSection = ({ stacks }: { stacks: Stack[] }) => (
         nombreuses entreprise a l'exemple de Orange Cameroun, HUGO Company LTD,
         CENADI et MODRY Sarl
       </p>
-
+  
       <h6 className="mt-3">Stacks</h6>
       <Row>
         <Col
