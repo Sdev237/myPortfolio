@@ -1,4 +1,3 @@
-// components/Navbar.js
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import './NavGithub.scss';
