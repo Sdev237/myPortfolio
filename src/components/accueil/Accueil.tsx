@@ -284,7 +284,7 @@ const AboutSection = ({ stacks }: { stacks: Stack[] }) => (
     </h6>
     <Col className="bio px-3 py-4">
       <h1 className="mb-4 text-center text-lg-start" style={{ opacity: "1" }}>
-        Hi THERE👋HOW'S IT GOING
+        Hi THERE👋HOW'S IT GOING !!
       </h1>
       <h2 className="text-center text-lg-start">
         Bienvenue Sur Mon Portfolio !
