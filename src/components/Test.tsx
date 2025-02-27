@@ -24,6 +24,8 @@ const Test = () => {
             <ul>
               <li>Sdev237/Landing-page</li>
               <li>Sdev237/myPortfolio</li>
+              <li>Sdev237/Landing-page</li>
+              <li>Sdev237/myPortfolio</li>
             </ul>
           </div>
         </div>
