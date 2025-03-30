@@ -1,17 +1,4 @@
-{/*import React from 'react';
-import GitHubContributions from 'react-github-contributions';
 
-const ContributionGithub = () => {
-  return (
-    <div>
-      <aside className='' style={{border: '1px  #333', borderRadius: '0.4rem'}}>
-        <GitHubContributions username="Sdev237" />
-      </aside>
-    </div>
-  );
-};
-
-export default ContributionGithub;*/}
 
 import React, { useState } from 'react';
 import './ContributionGithub.scss';
@@ -64,7 +51,7 @@ const ContributionGithub: React.FC = () => {
   const [activeYear, setActiveYear] = useState('Orange');
   const years = ['Orange', 'Hugo Company', 'CENADI'];
 
-  const gridWidth: number = 53 * 13; // 53 semaines * 13px par case
+  const gridWidth: number = 53 * 13; 
 
   const allDays: string[] = Array.from({ length: 371 }, (_, i) => {
     const date: Date = new Date('2023-10-01');
