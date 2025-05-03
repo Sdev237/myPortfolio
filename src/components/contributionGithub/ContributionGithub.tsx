@@ -48,15 +48,7 @@ const ContributionGithub: React.FC = () => {
     return { contributions, totalContributions };
   };
 
-  const { contributions, totalContributions } = generateContributions();
-
-  const getColor = (count: number): string => {
-    if (count === 0) return '#161b22';
-    if (count < 2) return '#0e4429';
-    if (count < 5) return '#006d32';
-    if (count < 8) return '#26a641';
-    return '#39d353';
-  };
+ 
 
   const daysOfWeek: string[] = ['Lun', 'Jeu', 'Dim'];
   const months: string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
