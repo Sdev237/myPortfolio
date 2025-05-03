@@ -55,6 +55,25 @@ const Accueil = () => {
           >
             <AboutSection stacks={stacks} />
 
+            <h6>Entreprises</h6>
+            <aside className="mb-4">
+              <ContributionGithub />
+            </aside>
+
+            <div className="">
+              <h6>Experience Professionnelle</h6>
+              <aside className="mb-2">
+                <EnterpriseExperience />
+              </aside>
+            </div>
+
+            <h6>Fun Projets</h6>
+            <aside className="mb-4 px-4">
+              <FunProjet />
+            </aside>
+            <aside className="mb-4 px-4">
+              <Footer />
+            </aside>
           </Col>
         </Row>
       </Container>
