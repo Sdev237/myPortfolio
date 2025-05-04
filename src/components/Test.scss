@@ -1,4 +1,30 @@
-.
+.contribution-activity {
+  background-color: #0d1117;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.month {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 9px;
+}
+
+.timeline {
+  margin-top: 20px;
+}
+
+.event {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
 .icon {
   font-size: 1.5em;
   margin-right: 10px;
