@@ -12,19 +12,7 @@ interface NavbarProps {
   toggleLangue: () => void;
 } 
 
-const Navbar: React.FC<NavbarProps> = ({ toggleTheme, toggleLangue }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [langue, setLangue] = useState('Fr');
 
-  const toggle = useCallback(() => {
-    setIsDarkMode(prevMode => !prevMode);
-    toggleTheme();
-  }, [toggleTheme]);
-
-  const handleLanguageChange = useCallback(() => {
-    setLangue(prevLangue => prevLangue === 'Fr' ? 'En' : 'Fr');
-    toggleLangue();
-  }, [toggleLangue]);
 
   const isMobile = useMediaQuery({ maxWidth: 820 });
 
