@@ -7,45 +7,7 @@
   }
 }
 
-.yearSelector {
-  .yearSelectorButton {
-    border: none;
-    padding: 5px 0px;
-    border-radius: 6px;
-    font-size: 14px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-    background-color: transparent;
 
-    &:hover {
-      background-color: #30363d;
-    }
-    
-    &.active {
-      background-color: #2ea2f0;
-      color: #fff;
-    }
-  }
-}
-.contribution-github {
-  padding: 20px;
-  border-radius: 6px;
-  //max-width: calc(53 * 13px + 60px);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  color: #c9d1d9;
-
-  .contribution-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-
-    .contribution-count {
-      color: #3d3f42;
-      font-size: 19px;
-    }
 
     .contribution-settings {
       color: #3d3f42;
