@@ -76,7 +76,39 @@ const ContributionGithub: React.FC = () => {
   return (
     <div className="contribution-github">
       <div className="contribution-header">
-       
+        <span className="contribution-count ">
+          Expérience de travail 
+        </span>
+        <div className="contribution-settings">
+          Paramètres de contribution
+          <span style={{marginLeft: '5px', textAlign: 'center'}}>▼</span>
+        </div>
+      </div>
+      <div className="contribution-content p-3" style={{border: '1px solid #333', borderRadius: '0.4rem', overflow: 'auto'}}>
+        <div className="contribution-graph">
+          <div className="months-container" style={{ width: `${gridWidth}px`}}>
+            {months.map((month, index) => (
+              <div key={index} className="month">{month}</div>
+            ))}
+          </div>
+          <div className="days-and-squares">
+            <div className="days-of-week">
+              {daysOfWeek.map((day, index) => (
+                <div key={index} className="day">{day}</div>
+              ))}
+            </div>
+            <div className="squares-container">
+              {allDays.map((date) => {
+                const contribution = contributions.find(c => c.date === date) || { date, count: 0 };
+                return (
+                  <div
+                    key={date}
+                    className={`contribution-square level-${contribution.count}`}
+                    title={`${date}: ${contribution.count} contributions`}
+                  />
+                );
+              })}
+            </div>
           </div>
           <div className="graph-footer">
             <span className="learn-more">{totalContributions} contributions au cours de la dernière année</span>

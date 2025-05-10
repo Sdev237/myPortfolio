@@ -10,7 +10,19 @@ export const EnterpriseExperience = () => {
   ];
   return (
     <>
-     
+      <div className='px-4 py-4 d-flex flex-wrap justify-content-between align-items-center w-100 gap-3'>
+        {company.map((comp, idx) => (
+          <div key={idx} className='box text-center'>
+            <div className=" col-12 col-md-12 col-lg-12 text-start d-flex flex-column z-1">
+              <div className="name d-flex align-items-center pb-3">
+                {comp.logo && <img src={comp.logo} alt={comp.name} width={40} height={30} className='me-2'/>}
+                {comp.name}
+              </div>
+              <span className='opacity-75'>{comp.poste}</span>
+            </div>
+            <div className="date my-2">{comp.date}</div>
+          </div>
+        ))}
       </div>
     </>
   )
