@@ -1,17 +1,4 @@
-{/*import React from 'react';
-import GitHubContributions from 'react-github-contributions';
 
-const ContributionGithub = () => {
-  return (
-    <div>
-      <aside className='' style={{border: '1px  #333', borderRadius: '0.4rem'}}>
-        <GitHubContributions username="Sdev237" />
-      </aside>
-    </div>
-  );
-};
-
-export default ContributionGithub;*/}
 
 import React, { useState } from 'react';
 import './ContributionGithub.scss';
@@ -31,22 +18,7 @@ const ContributionGithub: React.FC = () => {
     let totalContributions: number = 0;
     const maxContributions: number = 800;
 
-    for (let d: Date = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
-      const randomFactor: number = Math.random();
-      let count: number = 0;
-      if (randomFactor > 0.7) {
-        count = Math.min(Math.floor(Math.random() * 4) + 1, maxContributions - totalContributions);
-      }
-      totalContributions += count;
-      contributions.push({
-        date: d.toISOString().split('T')[0],
-        count: count
-      });
-      if (totalContributions >= maxContributions) break;
-    }
-
-    return { contributions, totalContributions };
-  };
+   
 
   const { contributions, totalContributions } = generateContributions();
 
