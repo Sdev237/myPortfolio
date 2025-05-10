@@ -75,7 +75,8 @@ const ContributionGithub: React.FC = () => {
 
   return (
     <div className="contribution-github">
-      
+      <div className="contribution-header">
+       
           </div>
           <div className="graph-footer">
             <span className="learn-more">{totalContributions} contributions au cours de la dernière année</span>
