@@ -21,42 +21,6 @@ body {
   --text-color: #{$light-text-color};
 }
 
-.dark {
-  --background-color: #{$dark-background-color};
-  --text-color: #{$dark-text-color};
-}
-
-.app {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  
-}
-
-.navi {
-  background-color: #eee;
-  padding: 20px;
-
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    Link {
-      text-decoration: none;
-      color: #000;
-      margin-right: 10px;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-
-    a {
-      cursor: pointer;
-    }
-  }
-}
 
 .home, .profile {
   padding: 20px;
