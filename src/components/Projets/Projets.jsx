@@ -7,10 +7,10 @@ import "./Projets.scss";
 
 const projects = [
   {
-    title: "Apprendre à Technologies",
+    title: "shaka-player-lecteur",
     description:
-      "Deviens développeur web, décrocher un job en CDI ou créer des SaaS.",
-    view: "https://apprendre-a-technologies.fr/",
+      "Lecteur vidéo React/TypeScript avec Shaka Player, intégrant DASH/HLS, gestion des sous-titres, qualité adaptative et interface responsive",
+    view: "https://sap-streaming.vercel.app/",
   },
   {
     title: "Code & Cash - Podcast",

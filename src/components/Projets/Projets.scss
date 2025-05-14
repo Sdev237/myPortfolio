@@ -20,10 +20,10 @@ ul {
   margin: 10px 0;
   padding: 10px;
   border-radius: 4px;
-  opacity: 0; 
-  transform: translateY(20px); 
-  animation: fadeInUp 0.5s forwards; 
-  animation-delay: var(--delay); 
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+  animation-delay: var(--delay);
 }
 
 // Animation keyframes
@@ -165,7 +165,7 @@ ul {
     &:focus {
       border-color: #2ea2f0;
       color: #2ea2f0;
-      background:  linear-gradient(
+      background: linear-gradient(
         120deg,
         rgba(36, 44, 68, 0.98) 50%,
         rgba(24, 28, 44, 0.95) 90%
