@@ -6,15 +6,16 @@ import "swiper/css/navigation";
 import "./Projets.scss";
 
 const projects = [
-  {
-    title: "shaka-player-lecteur",
-    description:
-      "Lecteur vidéo React/TypeScript avec Shaka Player, intégrant DASH/HLS, gestion des sous-titres, qualité adaptative et interface responsive",
-    view: "https://sap-streaming.vercel.app/",
-  },
+ 
   {
     title: "Code & Cash - Podcast",
     description: "Les développeurs aussi peuvent faire du cash.",
+  },
+  {
+    title: "shaka-player-lecteur",
+    description:
+      "Lecteur vidéo React avec Shaka Player, intégrant DASH/HLS et interface responsive",
+    view: "https://sap-streaming.vercel.app/",
   },
   {
     title: "BulkCorrector",
