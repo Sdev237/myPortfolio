@@ -20,10 +20,10 @@ ul {
   margin: 10px 0;
   padding: 10px;
   border-radius: 4px;
-  opacity: 0; // Initial opacity for animation
-  transform: translateY(20px); // Initial position for animation
-  animation: fadeInUp 0.5s forwards; // Animation applied
-  animation-delay: var(--delay); // Delay for each item
+  opacity: 0; 
+  transform: translateY(20px); 
+  animation: fadeInUp 0.5s forwards; 
+  animation-delay: var(--delay); 
 }
 
 // Animation keyframes
@@ -140,7 +140,6 @@ ul {
       align-items: flex-end;
     }
   }
-
   .swiper-button-next,
   .swiper-button-prev {
     color: #c9d1d9;
@@ -162,7 +161,6 @@ ul {
       color: inherit;
       font-weight: 300;
     }
-
     &:hover,
     &:focus {
       border-color: #2ea2f0;
