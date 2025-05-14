@@ -35,8 +35,14 @@ li {
 }
 
 .projects-section {
-  padding: 2rem 0;
+  padding: 3rem 0 2rem 0;
   text-align: left;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  position: relative;
 
   h6 {
     color: var(--text-color, #fff);
@@ -53,40 +59,53 @@ li {
   }
 
   .projects-cards {
+    width: 100%;
+    .swiper {
+      padding-bottom: 2.5rem;
+    }
+    .swiper-wrapper {
+      display: flex;
+      align-items: stretch;
+    }
+  }
+
+  .swiper-slide {
     display: flex;
-    gap: 2rem;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: stretch;
+    height: auto;
   }
 
   .project-card {
-    min-width: 320px;
-    max-width: 400px;
-    flex: 1 1 320px;
+    width: 290px;
+    min-width: 290px;
+    max-width: 290px;
+    height: 190px;
     background: linear-gradient(
       120deg,
       rgba(24, 28, 44, 0.95) 60%,
       rgba(36, 44, 68, 0.85) 100%
     );
-    border-radius: 24px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(6px);
-    padding: 2.5rem 2rem;
-    margin-bottom: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
+    padding: 1.5rem 1.2rem;
+    margin: 16px 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.7s forwards;
-    animation-delay: inherit;
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    opacity: 1;
+    transform: none;
+    animation: none;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
 
     &:hover {
-      box-shadow: 0 12px 40px 0 rgba(46, 162, 240, 0.18);
-      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 32px 0 rgba(46, 162, 240, 0.13);
+      transform: translateY(-6px) scale(1.025);
       background: linear-gradient(
         120deg,
         rgba(36, 44, 68, 0.98) 60%,
@@ -95,39 +114,68 @@ li {
     }
 
     .project-title {
-      color: var(--text-color, #fff);
-      font-size: 2rem;
+      color: #2ea2f0 !important;
+      font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: 0.7rem;
       letter-spacing: -1px;
-      background: linear-gradient(
-        90deg,
-        #2ea2f0 0 30%,
-        var(--text-color, #fff) 100%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      background: none !important;
+      -webkit-background-clip: initial !important;
+      -webkit-text-fill-color: initial !important;
+      background-clip: initial !important;
     }
 
     .project-description {
-      color: #b0b8c1;
-      font-size: 1.1rem;
+      color: #98999a !important;
+      font-size: 1rem;
       font-weight: 400;
       margin-bottom: 0;
     }
   }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #2ea2f0;
+    background: rgba(24, 28, 44, 0.7);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(46, 162, 240, 0.12);
+    transition: background 0.2s;
+    &:hover {
+      background: #2ea2f0;
+      color: #fff;
+    }
+  }
+  .swiper-button-disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
 }
 
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+@media (max-width: 900px) {
+  .projects-section {
+    padding: 2rem 0.5rem;
+    max-width: 100vw;
+    .project-card {
+      width: 90vw;
+      min-width: 240px;
+      max-width: 95vw;
+      height: 260px;
+      margin: 0 8px;
+      padding: 1.5rem 1rem;
+      font-size: 1rem;
+    }
   }
 }
 
 // Thème clair
 [data-theme="light"] .projects-section {
+  background: none;
+  box-shadow: none;
   h6,
   .project-title {
     color: #222;
@@ -138,17 +186,8 @@ li {
     color: #444;
   }
   .project-card {
-    background: linear-gradient(120deg, #f7fafd 60%, #e6eaf3 100%);
+    background: rgba(255, 255, 255, 0.97);
     border: 1px solid #e1e4e8;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-    .project-title {
-      background: linear-gradient(90deg, #2ea2f0 0 30%, #222 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .project-description {
-      color: #444;
-    }
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
   }
 }
