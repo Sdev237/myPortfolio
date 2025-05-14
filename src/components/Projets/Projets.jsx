@@ -10,6 +10,7 @@ const projects = [
     title: "Apprendre à Technologies",
     description:
       "Deviens développeur web, décrocher un job en CDI ou créer des SaaS.",
+    view: "https://apprendre-a-technologies.fr/",
   },
   {
     title: "Code & Cash - Podcast",
@@ -58,7 +59,19 @@ const Projets = () => {
           <SwiperSlide key={project.title}>
             <div className="project-card text-white-50">
               <h2 className="project-title">{project.title}</h2>
-              <p className="project-description">{project.description}</p>
+              <p className="project-description">
+                {project.description}
+                {project.view && (
+                  <a
+                    href={project.view}
+                    className="project-view-inline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    &nbsp;View Project <span className="project-arrow">→</span>
+                  </a>
+                )}
+              </p>
             </div>
           </SwiperSlide>
         ))}

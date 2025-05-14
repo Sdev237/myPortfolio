@@ -6,18 +6,18 @@ const currentDate = new Date();
 const currentMonth = currentDate.getMonth();
 const currentYear = currentDate.getFullYear();
 const monthNames = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  "Janvier",
+  "Février",
+  "Mars",
+  "Avril",
+  "Mai",
+  "Juin",
+  "Juillet",
+  "Août",
+  "Septembre",
+  "Octobre",
+  "Novembre",
+  "Décembre",
 ];
 
 const monthInFrench = monthNames[currentMonth];
@@ -89,8 +89,8 @@ const ActivityItem = ({
     <div className="activity-details">
       <div className="activity-description">
         {activity.type === "commits"
-          ? `${activity.details} Created in ${activity.repository}`
-          : `Repository Created ${activity.repository}`}
+          ? `${activity.details} Créé Dans ${activity.repository}`
+          : `Dépôt Créé ${activity.repository}`}
       </div>
       <div className="activity-meta">
         <a
@@ -99,7 +99,9 @@ const ActivityItem = ({
           }
         >
           <span className="repository-name">
-            <span style={{ color: "#a8c2ab" }}>View page result: </span>
+            <span style={{ color: "#a8c2ab" }}>
+              Voir le résultat de la page :{" "}
+            </span>
             {activity.repository}
           </span>
           {activity.type === "commits" ? (
@@ -151,7 +153,7 @@ export const FunProjet = () => {
         ))}
       </div>
       <div className="show-more-container p-4">
-        <button className="show-more-button">Show more activity</button>
+        <button className="show-more-button">Afficher plus d'activité</button>
       </div>
     </div>
   );

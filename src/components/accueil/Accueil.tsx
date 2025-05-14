@@ -218,9 +218,10 @@ const AboutSection = ({ stacks }: { stacks: Stack[] }) => (
         fortunate to develop my skills within many companies such as Orange
         Cameroon, HUGO Company LTD, CENADI and MODRY Sarl
       </p>
-      <h6 className="mt-3">Stacks</h6>
-      <Projets />
-
+      <div className="">
+        <h6 className="mt-3">Stacks</h6>
+        <Projets />
+      </div>
       <h6 className="mt-3">Stacks</h6>
       <Row>
         <Col

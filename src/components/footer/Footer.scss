@@ -3,10 +3,14 @@
   text-align: center;
 }
 
+.footer-content {
+  width: 100%;
+}
+
 .footer-links {
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
   list-style: none;
   padding: 0;
 }
@@ -22,11 +26,21 @@
 .footer-links a {
   color: inherit;
   font-weight: 600;
-  opacity: 0,01;
   text-decoration: none;
 }
 
 .footer-links a:hover {
   color: #2ea2f0;
   text-decoration: underline;
+}
+
+// Suppression de tout effet de flou ou d'opacité sur le footer
+
+
+footer,
+.footer,
+.footer * {
+  filter: none !important;
+  backdrop-filter: none !important;
+  opacity: 1 !important;
 }
