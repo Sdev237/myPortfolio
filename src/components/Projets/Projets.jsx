@@ -1,30 +1,44 @@
 import React from "react";
 import "./Projets.scss";
 
-export const Projets = () => {
+const Projets = () => {
+  const projects = [
+    {
+      title: "Apprendre à Technologies",
+      description:
+        "Deviens développeur web, décrocher un job en CDI ou créer des SaaS.",
+    },
+    {
+      title: "Code & Cash - Podcast",
+      description: "Les développeurs aussi peuvent faire du cash.",
+    },
+    {
+      title: "BulkCorrector",
+      description: "Correct the grammar of your text in minutes.",
+    },
+  ];
+
   return (
-    <div>
-      <h1>Projets</h1>
-      <p>Cette section présente les différents projets que j'ai réalisés.</p>
-      <ul>
-        <li style={{ "--delay": "0s" }}>
-          Projet 1 : Développement d'un site web pour une entreprise
-        </li>
-        <li style={{ "--delay": "0.1s" }}>
-          Projet 2 : Création d'une application mobile pour la gestion des
-          tâches
-        </li>
-        <li style={{ "--delay": "0.2s" }}>
-          Projet 3 : Intégration d'un système de paiement sécurisé pour un
-           =e-commerce
-        </li>
-        <li>Projet 1 : Développement d'un site</li>
-        <li>
-          Projet 2 : Création d'une application mobile pour la planificastion
-          des projets
-        </li>
-        <li>Projet 3 : Intégration d'un système de paiement avec strip</li>
-      </ul>
+    <div className="projects-section">
+      <h6>Projects</h6>
+      <p className="projects-desc">
+        I create applications and tools to be profitable and help people with my
+        skills.
+      </p>
+      <div className="projects-cards">
+        {projects.map((project, idx) => (
+          <div
+            className="project-card"
+            key={project.title}
+            style={{ animationDelay: `${idx * 0.1}s` }}
+          >
+            <h2 className="project-title">{project.title}</h2>
+            <p className="project-description">{project.description}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
+
+export default Projets;

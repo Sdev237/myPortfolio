@@ -1,55 +1,56 @@
 .home {
-  margin-top: 5%;  
+  margin-top: 5%;
 
-   .competence{
+  .competence {
     color: #c9ffff;
     padding: 2px;
     text-align: center;
-    border: 2px ;
+    border: 2px;
     background-color: #333;
     border-radius: 0.5rem;
-   }
+  }
 
-   .contactMe{
+  .contactMe {
     color: #fff;
     text-align: center;
     border: 1px solid #2ea2f0;
     background-color: #333;
     border-radius: 2rem;
 
-    &:hover{
-     color: #2ea2f0;
-     background-color: #000;
+    &:hover {
+      color: #2ea2f0;
+      background-color: #000;
     }
-   }
-   
-   .link{
-    .link-hover:hover{
+  }
+
+  .link {
+    .link-hover:hover {
       color: #2ea2f0;
       background-color: #333;
       border: 1px solid #2ea2f0;
       border-radius: 1rem;
       opacity: 1;
-     transition: 0.3s;
+      transition: 0.3s;
     }
-   }
   }
-  .icon{
+
+  .icon {
     width: 80px;
     left: 80px;
     min-height: 48px;
     min-width: 48px;
     font-size: 0px;
-   }
-   
-   .about{
+  }
+
+  .about {
     max-height: vh;
-   }
-  .bio{
+  }
+
+  .bio {
     margin: 0rem 0.3rem 1rem 0.3rem;
     border-radius: 0.4rem;
-    
   }
+
   h2 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -59,6 +60,7 @@
     font-size: 16px;
     line-height: 1.5;
   }
+
   .round-avatar {
     background-color: #000;
     background-size: cover;
@@ -68,28 +70,49 @@
     height: 200px;
     background: url("../../app/fonts/sap.png") no-repeat center;
     background-size: cover;
-    box-shadow:1px 2px 2px 4px rgba(59, 121, 246, 0.15);
+    box-shadow: 1px 2px 2px 4px rgba(59, 121, 246, 0.15);
   }
-  
+
   .avatar-container {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .stack{
+
+  .stack {
     display: flex;
     justify-content: center;
     align-items: center;
-    .stackBtn{
+
+    .stackBtn {
       margin: 7px;
     }
   }
+
   .mobile {
-    
     margin: 0;
     width: 100%;
     border-radius: 0%;
-    justify-content: center; 
+    justify-content: center;
     margin-top: 0;
   }
 
+  .profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(13, 17, 23, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    .name-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #fff;
+      margin: 0;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
