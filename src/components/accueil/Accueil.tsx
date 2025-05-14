@@ -21,12 +21,12 @@ import {
 } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
 import "./Accueil.scss";
-import Projets from "../projets/Projets";
 import ContributionGithub from "../contributionGithub/ContributionGithub";
 import { FunProjet } from "../projet/FunProjet";
 import { EnterpriseExperience } from "../experience/EnterpriseExperience";
 import { Footer } from "../footer/Footer";
 import Contact from "../Contact";
+import Projets from "../Projets/Projets";
 
 interface Stack {
   icon: JSX.Element;
