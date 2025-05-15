@@ -13,7 +13,7 @@
     align-items: center;
     margin: 4.5rem 0;
     gap: 1.4rem;
-    .tools-header{
+    .tools-header {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -88,7 +88,11 @@
 
 /* Thème light */
 .app.light .tools-root {
-  --tools-bg: #f7f8fa;
+  --tools-bg: radial-gradient(
+    ellipse 80% 60% at 10% 10%,
+    #e7edff 60%,
+    #fff 100%
+  );
   --tools-title: #222;
   --tools-text: #444;
   --tools-subtitle: #666;

@@ -2,7 +2,7 @@ $light-background-color: #d1fafaaf;
 $light-text-color: #161b22;
 $dark-background-color: #161b22;
 $dark-text-color: #fff;
-*{
+* {
   padding: 0;
   margin: 0;
 }
@@ -11,13 +11,24 @@ body {
   margin: 0;
   padding: 0;
 }
-.marg{
+.marg {
   height: 50%;
 }
 
 .light {
-  --background-color: #{$light-background-color};
-  --text-color: #{$light-text-color};
+  --background-color: transparent;
+  --text-color: #161b22;
+}
+
+.app.light {
+  background: radial-gradient(
+    ellipse 50% 35% at 15% 10%,
+    #b4cafe 30%,
+    #e0e7ff 60%,
+    #fff 100%
+  );
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .dark {
@@ -29,7 +40,6 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
-  
 }
 
 .navi {
@@ -53,11 +63,11 @@ body {
 
     a {
       cursor: pointer;
-      
     }
   }
 }
 
-.home, .profile {
+.home,
+.profile {
   padding: 20px;
 }

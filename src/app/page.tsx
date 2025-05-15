@@ -1,26 +1,15 @@
 "use client";
-
-
-import { useState } from "react";
+import { useTheme } from "@/components/ThemeProvider";
 import Navbar from "@/components/navbar/Navbar";
 import Accueil from "@/components/accueil/Accueil";
 
-export default function HomePage() {
-  const [theme, setTheme] = useState("dark");
-  const [langue, setLangue] = useState("Fr");
-  const [langueProfil, setLangueProfil] = useState("Fr");
-
-  const toggleTheme = () =>
-    setTheme((t) => (t === "light" ? "dark" : "light"));
-  const toggleLangue = () => {
-    setLangue((l) => (l === "Fr" ? "En" : "Fr"));
-    setLangueProfil((l) => (l === "Fr" ? "En" : "Fr"));
-  };
+export default function Home() {
+  const { toggleTheme, toggleLangue } = useTheme();
 
   return (
-    <main className={`app ${theme} ${langue} ${langueProfil}`}>
+    <>
       <Navbar toggleTheme={toggleTheme} toggleLangue={toggleLangue} />
       <Accueil />
-    </main>
+    </>
   );
 }
