@@ -1,16 +1,16 @@
 // Styles pour le composant Projets
 
-h6 {
+.projects-section h6 {
   color: #333;
   font-size: 2em;
 }
 
-p {
+.projects-section p {
   font-size: 1.2em;
   color: #666;
 }
 
-ul {
+.projects-section ul {
   list-style-type: none;
   padding: 0;
 }
@@ -297,6 +297,11 @@ ul {
     margin-left: 0.2em;
     font-size: 1.1em;
     font-weight: 300;
+    color: inherit;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform;
   }
@@ -309,4 +314,23 @@ ul {
       transform: translateX(6px);
     }
   }
+}
+
+.projects-section .swiper-button-next::after {
+  content: "→";
+  font-size: 1.6rem;
+  color: inherit;
+  font-weight: 300;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.projects-section .swiper-button-prev::after {
+  content: "←";
+  font-size: 1.6rem;
+  color: inherit;
+  font-weight: 300;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }

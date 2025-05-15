@@ -6,15 +6,14 @@ import "swiper/css/navigation";
 import "./Projets.scss";
 
 const projects = [
- 
   {
     title: "Code & Cash - Podcast",
-    description: "Les développeurs aussi peuvent faire du cash.",
+    description: "Developers can make money too.",
   },
   {
     title: "shaka-player-lecteur",
     description:
-      "Lecteur vidéo React avec Shaka Player, intégrant DASH/HLS et interface responsive",
+      "React video player using Shaka Player, supporting DASH/HLS with a responsive interface.",
     view: "https://sap-streaming.vercel.app/",
   },
   {
@@ -37,14 +36,10 @@ const projects = [
   },
 ];
 
+
 const Projets = () => {
   return (
     <div className="projects-section">
-      <h6>Projects</h6>
-      <p className="projects-desc">
-        I create applications and tools to be profitable and help people with my
-        skills.
-      </p>
       <Swiper
         modules={[Navigation]}
         navigation

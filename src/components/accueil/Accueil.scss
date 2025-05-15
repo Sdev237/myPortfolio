@@ -115,4 +115,32 @@
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
   }
+
+  .about-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35em 0.65em;
+    margin: 0.5rem;
+    font-size: 0.85em;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    background-color: rgba(59, 121, 246, 0.15);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: #1a8cd8;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    svg {
+      margin-right: 0.5em;
+    }
+  }
 }
