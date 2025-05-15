@@ -132,11 +132,18 @@
     .show-more-button {
       background-color: #21262d;
       color: #c9d1d9;
+      text-decoration: none;
       border: 1px solid #30363d;
       border-radius: 6px;
       padding: 5px 16px;
       font-size: 14px;
       cursor: pointer;
+
+      &:hover {
+       
+        background-color: rgba(59, 121, 246, 0.15);
+        color: #c9d1d9;
+      }
     }
   }
 }

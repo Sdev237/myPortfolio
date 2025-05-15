@@ -80,7 +80,7 @@
     width: 290px;
     min-width: 290px;
     max-width: 290px;
-    height: 190px;
+    height: 210px;
     background: linear-gradient(
       120deg,
       rgba(24, 28, 44, 0.95) 60%,
@@ -88,7 +88,7 @@
     );
     border-radius: 20px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
-    padding: 1.5rem 1.2rem;
+    padding: 1rem 1.2rem;
     margin: 16px 32px;
     display: flex;
     flex-direction: column;
@@ -225,6 +225,7 @@
   padding: 0.5rem 1.2rem;
   background: #2ea2f0;
   color: #fff;
+  text-decoration: none;
   border: none;
   border-radius: 8px;
   font-weight: 600;
@@ -279,42 +280,74 @@
 }
 
 .project-view-inline {
+  position: relative;
+  display: inline-block;
+  padding: 0.2em 0;
   color: #2ea2f0;
-  font-weight: 600;
-  font-size: 1em;
   text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
+  font-weight: 600;
   cursor: pointer;
-  transition: color 0.2s;
+  overflow: visible;
 
-  .project-arrow {
-    display: inline-block;
-    margin-left: 0.2em;
-    font-size: 1.1em;
-    font-weight: 300;
-    color: inherit;
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform;
+  // Bordure finale (transition directe)
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2ea2f0;
+    transition: width 0.3s ease-out;
   }
 
-  &:hover,
-  &:focus {
+  // Goutte animée
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 6px; height: 6px;
+    background-color: #2ea2f0;
+    border-radius: 50%;
+    /* contour CCW : bas‐gauche → haut‐gauche → haut‐droite → bas‐droite */
+    offset-path: path("M0,100% L0,0 L100%,0 L100%,100%");
+    offset-distance: 0%;
+    opacity: 0;
+  }
+
+  // ÉTAT HOVER : lance tout de suite la goutte + la bordure
+  &:hover {
     color: #1769aa;
-    text-decoration: underline;
-    .project-arrow {
-      transform: translateX(6px);
+
+    &::before {
+      width: 100%;
+    }
+
+    &::after {
+      animation: drop-animate 0.8s linear forwards;
+      opacity: 1;
+    }
+  }
+
+  // QUAND ON SORT : tout reset instantanément
+  &:not(:hover) {
+    &::before {
+      width: 0;
+    }
+    &::after {
+      animation: none;
+      offset-distance: 0%;
+      opacity: 0;
     }
   }
 }
+
+// Keyframes : goutte circule en CCW puis disparaît
+@keyframes drop-animate {
+  0%   { offset-distance: 0%;   opacity: 1; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+
+
 
 .projects-section .swiper-button-next::after {
   content: "→";

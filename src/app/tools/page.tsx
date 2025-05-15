@@ -1,11 +1,11 @@
+// /app/tools/page.tsx
 "use client";
 
-
-import { useState } from "react";
 import Navbar from "@/components/navbar/Navbar";
-import Accueil from "@/components/accueil/Accueil";
+import { Tools } from "@/components/tools/Tools";
+import { useState } from "react";
 
-export default function HomePage() {
+export default function ToolsPage() {
   const [theme, setTheme] = useState("dark");
   const [langue, setLangue] = useState("Fr");
   const [langueProfil, setLangueProfil] = useState("Fr");
@@ -20,7 +20,7 @@ export default function HomePage() {
   return (
     <main className={`app ${theme} ${langue} ${langueProfil}`}>
       <Navbar toggleTheme={toggleTheme} toggleLangue={toggleLangue} />
-      <Accueil />
+      <Tools />
     </main>
   );
 }

@@ -23,7 +23,7 @@ export const Footer = () => {
               <a href="/#terms">Equipe</a>
             </li>
             <li className="opacity-50">
-              <a href="/#privacy">Projets</a>
+              <a href="https://github.com/Sdev237?tab=repositories" target="_blank" rel="noopener noreferrer">Projets</a>
             </li>
             <li className="opacity-50">
               <a href="/#security">Areas of Interest</a>

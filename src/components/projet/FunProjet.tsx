@@ -153,7 +153,7 @@ export const FunProjet = () => {
         ))}
       </div>
       <div className="show-more-container p-4">
-        <button className="show-more-button">Afficher plus d'activité</button>
+        <a href="https://github.com/Sdev237?tab=repositories" className="show-more-button">Show more activities</a>
       </div>
     </div>
   );

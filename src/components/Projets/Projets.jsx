@@ -7,32 +7,33 @@ import "./Projets.scss";
 
 const projects = [
   {
-    title: "Code & Cash - Podcast",
-    description: "Developers can make money too.",
-  },
+    title: "Sales & Inventory System",
+    description: "A full-featured web app to manage sales and inventory with real-time stock updates and user management.",
+    view: "https://github.com/Sdev237/inventory-hugo-company",
+  },  
   {
     title: "shaka-player-lecteur",
-    description:
-      "React video player using Shaka Player, supporting DASH/HLS with a responsive interface.",
+    description: "React video player using Shaka Player, supporting DASH/HLS with a responsive interface.",
     view: "https://sap-streaming.vercel.app/",
   },
   {
-    title: "BulkCorrector",
-    description: "Correct the grammar of your text in minutes.",
+    title: "Ebulletin MINFI",
+    description: "Official platform for Cameroonian civil servants to access and download their payslips online.",
+    view: "https://ebulletin.minfi.cm/",
   },
   {
-    title: "TaskFlow App",
-    description:
-      "A mobile app to manage your daily tasks efficiently and intuitively.",
+    title: "SaaS Express - Modern Landing Page",
+    description: "A sleek and responsive template to quickly launch a professional SaaS landing page.",
+    view: "https://landing-page-432f4.web.app/",
+  },
+  {
+    title: "TaskFlow – Task Manager",
+    description: "A minimalist web app to organize, prioritize, and track daily tasks with a clean and intuitive UI.",
+    view: "https://todo-list-six-orcin.vercel.app/",
   },
   {
     title: "E-commerce SecurePay",
     description: "Integration of a secure payment system for online shops.",
-  },
-  {
-    title: "Portfolio Generator",
-    description:
-      "Generate a beautiful portfolio website in minutes with no code.",
   },
 ];
 

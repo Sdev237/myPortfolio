@@ -10,6 +10,7 @@ import {
   FaDocker,
   FaMapMarkerAlt,
   FaEnvelope,
+  FaNode,
 } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
 import "./Accueil.scss";
@@ -42,8 +43,8 @@ const Accueil = () => {
     { icon: <FaCode />, name: "Typescript" },
     { icon: <FaReact />, name: "ReactJS" },
     { icon: <SiNextdotjs />, name: "Next.js" },
+    { icon: <FaNode />, name: "NodeJS" },
     { icon: <SiTailwindcss />, name: "TailwindCSS" },
-    { icon: <FaPhp />, name: "PHP" },
     { icon: <FaDocker />, name: "Docker" },
   ];
 
@@ -191,13 +192,13 @@ const Languages = () => (
 
 const AboutSection = ({ stacks }: { stacks: Stack[] }) => (
   <>
-    <h6 className="mx-2 text-center text-lg-start d-none d-lg-block">
+    <h5 className="mx-2 text-center text-lg-start d-none d-lg-block">
       About Me
-    </h6>
+    </h5>
     <Col className="bio px-3 py-4">
       <h2 className="text-center text-lg-start">👋 Hello, I'm Jedeon Sap</h2>
       <h2 className="about-title">
-        <em>Full Stack Developer and Cybersecurity Analyst</em>
+        <em>Full Stack Developer & QA Tester and Cybersecurity Analyst</em>
       </h2>
       <p className="about-highlight">
       I design robust and secure {" "}
@@ -274,9 +275,9 @@ const AboutSection = ({ stacks }: { stacks: Stack[] }) => (
           LinkedIn
         </a>
       </p>
-      <div style={{ marginTop: "4rem", marginBottom: "10px" }}>
-        <h6 className="mt-3">Projets</h6>
-        <p className="projects-desc" style={{ color: "#fff" }}>
+      <div style={{ marginTop: "2.2rem", marginBottom: "10px" }}>
+        <h6 className="mt-3 fw-bold">Projets</h6>
+        <p className="projects-desc" >
           I create applications and tools to be profitable and help people with
           my skills.
         </p>
