@@ -9,7 +9,7 @@ const projects = [
   {
     title: "Sales & Inventory System",
     description: "A full-featured web app to manage sales and inventory with real-time stock updates and user management.",
-    view: "https://github.com/Sdev237/inventory-hugo-company",
+    view: "https://github.com/Sdev237?tab=repositories",
   },  
   {
     title: "shaka-player-lecteur",
