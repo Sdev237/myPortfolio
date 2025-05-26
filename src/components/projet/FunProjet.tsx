@@ -35,7 +35,43 @@ interface ContributionActivity {
   link?: string;
 }
 
+const contributionActivity: ContributionActivity[] = [
+  {
+    type: "commits",
+    count: 2,
+    repository: "Sdev237/Landing Page",
+    description: "Created 8 commits in 1 repository",
+    details: "12 commits",
+    projet1: "https://landing-page-432f4.web.app",
+    date: "Octob 2024",
+  },
+  {
+    type: "repository",
+    repository: "Sdev237/TaskFlow",
+    description: "Created 1 repository",
+    projet2: "https://todo-list-six-orcin.vercel.app",
+    language: "TypeScript",
+    date: "Oct 15",
+  },
+];
 
+const ActivityIcon = ({ type }: { type: "commits" | "repository" }) =>
+  type === "commits" ? (
+    <svg
+      aria-hidden="true"
+      height="16"
+      viewBox="0 0 16 16"
+      version="1.1"
+      width="16"
+      data-view-component="true"
+      fill="#8b949e"
+      className="octicon octicon-repo-push"
+    >
+      <path d="M1 2.5A2.5 2.5 0 0 1 3.5 0h8.75a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0V1.5h-8a1 1 0 0 0-1 1v6.708A2.493 2.493 0 0 1 3.5 9h3.25a.75.75 0 0 1 0 1.5H3.5a1 1 0 0 0 0 2h5.75a.75.75 0 0 1 0 1.5H3.5A2.5 2.5 0 0 1 1 11.5Zm13.23 7.79h-.001l-1.224-1.224v6.184a.75.75 0 0 1-1.5 0V9.066L10.28 10.29a.75.75 0 0 1-1.06-1.061l2.505-2.504a.75.75 0 0 1 1.06 0L15.29 9.23a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018Z"></path>
+    </svg>
+  ) : (
+    <VscRepo className="color-white" />
+  );
 
 const ActivityItem = ({
   activity,
