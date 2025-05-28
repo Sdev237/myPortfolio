@@ -12,6 +12,7 @@ import {
 import "./Navbar.scss";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FaPersonRifle } from "react-icons/fa6";
 
 interface NavbarProps {
   toggleTheme: () => void;
@@ -49,6 +50,9 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, toggleLangue }) => {
           </Link>
           <Link href="/tools" className={path === "/tools" ? "active" : ""}>
             <FontAwesomeIcon icon={faLightbulb} />
+          </Link>
+          <Link href="/profil" className={path === "/profil" ? "active" : ""}>
+            <FaPersonRifle />
           </Link>
           <a
             className="toggle px-3 cursor-pointer"
