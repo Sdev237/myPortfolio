@@ -10,7 +10,46 @@
     border-radius: 0.5rem;
   }
 
- 
+  .contactMe {
+    color: #fff;
+    text-align: center;
+    border: 1px solid #2ea2f0;
+    background-color: #333;
+    border-radius: 2rem;
+
+    &:hover {
+      color: #2ea2f0;
+      background-color: #000;
+    }
+  }
+
+  .link {
+    .link-hover:hover {
+      color: #2ea2f0;
+      background-color: #333;
+      border: 1px solid #2ea2f0;
+      border-radius: 1rem;
+      opacity: 1;
+      transition: 0.3s;
+    }
+  }
+
+  .icon {
+    width: 80px;
+    left: 80px;
+    min-height: 48px;
+    min-width: 48px;
+    font-size: 0px;
+  }
+
+  .about {
+    max-height: vh;
+  }
+
+  .bio {
+    margin: 0rem 0.3rem 1rem 0.3rem;
+    border-radius: 0.4rem;
+  }
 
   h2 {
     font-size: 24px;
@@ -24,6 +63,7 @@
 
   .round-avatar {
     background-color: #000;
+    background-size: cover;
     border-radius: 50%;
     color: #fff;
     width: 200px;
