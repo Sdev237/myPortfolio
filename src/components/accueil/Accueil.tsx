@@ -177,18 +177,7 @@ const UsefulLinks = () => (
   </aside>
 );
 
-const Languages = () => (
-  <>
-    <hr />
-    <aside>
-      <h4 className="mb-3">Languages</h4>
-      <div className="d-flex flex-column opacity-75">
-        <h6>French (Native Language)</h6>
-        <h6>English (Second Language)</h6>
-      </div>
-    </aside>
-  </>
-);
+
 
 const AboutSection = ({ stacks }: { stacks: Stack[] }) => (
   <>
@@ -221,20 +210,7 @@ const AboutSection = ({ stacks }: { stacks: Stack[] }) => (
           web applications
         </a>
         , and I analyze
-        <a
-          className="about-badge"
-          href="https://www.linkedin.com/in/jedeon-sap-lontchi-10744b183"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Voir mon expertise cybersécurité"
-        >
-          <svg
-            width="16"
-            height="16"
-            style={{ marginRight: 4, verticalAlign: "middle" }}
-            fill="currentColor"
-            viewBox="0 0 16 16"
-          >
+        
             <path d="M8 0a8 8 0 1 0 8 8A8 8 0 0 0 8 0Zm0 15A7 7 0 1 1 15 8 7 7 0 0 1 8 15Zm0-13a6 6 0 1 0 6 6A6 6 0 0 0 8 2Zm0 11a5 5 0 1 1 5-5 5 5 0 0 1-5 5Zm0-9a4 4 0 1 0 4 4A4 4 0 0 0 8 4Zm0 7a3 3 0 1 1 3-3 3 3 0 0 1-3 3Z" />
           </svg>
           cyber risks
