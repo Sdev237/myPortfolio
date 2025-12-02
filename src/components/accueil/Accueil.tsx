@@ -177,7 +177,18 @@ const UsefulLinks = () => (
   </aside>
 );
 
-
+const Languages = () => (
+  <>
+    <hr />
+    <aside>
+      <h4 className="mb-3">Languages</h4>
+      <div className="d-flex flex-column opacity-75">
+        <h6>French (Native Language)</h6>
+        <h6>English (Second Language)</h6>
+      </div>
+    </aside>
+  </>
+);
 
 const AboutSection = ({ stacks }: { stacks: Stack[] }) => (
   <>
