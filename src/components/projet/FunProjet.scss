@@ -56,30 +56,7 @@
         }
       }
 
-      .activity-details {
-        flex: 1;
-        position: relative;
-
-        .activity-description {
-          font-size: 14px;
-          margin-bottom: 5px;
-        }
-
-        .activity-meta {
-          display: flex;
-          align-items: center;
-
-          a {
-            text-decoration: none;
-            color: #fff;
-          }
-
-          .repository-name {
-            color: #58a6ff;
-            font-size: 12px;
-            margin-right: 5px;
-            font-weight: 600;
-          }
+     
 
           .commit-count, .language-tag {
             background-color: #238636;
