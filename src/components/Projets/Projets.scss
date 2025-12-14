@@ -1,6 +1,37 @@
 // Styles pour le composant Projets
 
+.projects-section h6 {
+  color: #333;
+  font-size: 2em;
+}
 
+.projects-section p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.projects-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.projects-section li {
+  background: #e0e0e0;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+  animation-delay: var(--delay);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .projects-section {
   padding: 3rem 0 2rem 0;
@@ -261,19 +292,21 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: 0; left: 0;
+    bottom: 0;
+    left: 0;
     width: 0;
     height: 2px;
     background-color: #2ea2f0;
     transition: width 0.3s ease-out;
   }
 
-
   &::after {
     content: "";
     position: absolute;
-    bottom: 0; left: 0;
-    width: 6px; height: 6px;
+    bottom: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
     background-color: #2ea2f0;
     border-radius: 50%;
     /* contour CCW : bas‐gauche → haut‐gauche → haut‐droite → bas‐droite */
@@ -311,8 +344,14 @@
 
 // Keyframes : goutte circule en CCW puis disparaît
 @keyframes drop-animate {
-  0%   { offset-distance: 0%;   opacity: 1; }
-  100% { offset-distance: 100%; opacity: 0; }
+  0% {
+    offset-distance: 0%;
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
 }
 
 .projects-section .swiper-button-next::after {
