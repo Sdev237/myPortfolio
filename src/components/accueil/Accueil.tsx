@@ -16,6 +16,7 @@ import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
 import "./Accueil.scss";
 import ContributionGithub from "../contributionGithub/ContributionGithub";
 import { FunProjet } from "../projet/FunProjet";
+import { EnterpriseExperience } from "../experience/EnterpriseExperience";
 import { Footer } from "../footer/Footer";
 import Contact from "../Contact";
 import Projets from "../Projets/Projets";
@@ -87,7 +88,27 @@ const Accueil = () => {
   );
 };
 
-
+const ProfileSection = () => (
+  <Row>
+    <Col xs={12} sm={12} md={12} className="mt-5 my-lg-0">
+      <ProfileInfo />
+    </Col>
+    <Row>
+      <Col
+        xs={12}
+        sm={12}
+        className="mt-md-5 my-lg-0 text-center text-lg-start"
+      >
+        <UsefulLinks />
+      </Col>
+    </Row>
+    <Row>
+      <Col xs={12} sm={12} className="text-center text-lg-start langues">
+        <Languages />
+      </Col>
+    </Row>
+  </Row>
+);
 
 const ProfileInfo: React.FC = () => {
   return (
