@@ -44,7 +44,28 @@
     }
   }
 
- 
+  
+
+      .error-message {
+        color: #f85149;
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+
+        &::before {
+          content: "•";
+          font-size: 1.2rem;
+        }
+      }
+
+      textarea.form-control {
+        resize: vertical;
+        min-height: 120px;
+      }
+    }
+  }
 
   .modal-footer {
     border-top: 1px solid rgba(128, 128, 128, 0.2);
