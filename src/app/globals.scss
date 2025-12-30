@@ -11,9 +11,6 @@ body {
   margin: 0;
   padding: 0;
 }
-.marg {
-  height: 50%;
-}
 
 .light {
   --background-color: transparent;
@@ -40,31 +37,6 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.navi {
-  background-color: #eee;
-  padding: 20px;
-
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    Link {
-      text-decoration: none;
-      color: #000;
-      margin-right: 10px;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-
-    a {
-      cursor: pointer;
-    }
-  }
 }
 
 .home,
