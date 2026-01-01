@@ -12,26 +12,7 @@ body {
   padding: 0;
   height: 100vh;
 }
-.marg{
-  height: 50%;
-}
 
-.light {
-  --background-color: #{$light-background-color};
-  --text-color: #{$light-text-color};
-}
-
-.dark {
-  --background-color: #{$dark-background-color};
-  --text-color: #{$dark-text-color};
-}
-
-.app {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  
-}
 
 .navi {
   background-color: #eee;
