@@ -43,20 +43,7 @@
   box-shadow: none;
   position: relative;
 
-  h6 {
-    color: var(--text-color, #fff);
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
-
-  .projects-desc {
-    color: var(--text-color, #b0b8c1);
-    font-size: 1.25rem;
-    margin-bottom: 2.5rem;
-    font-weight: 400;
-  }
-
+ 
   .projects-cards {
     width: 100%;
     .swiper {
