@@ -243,7 +243,14 @@
               font-weight: 600;
             }
 
-           
+            .commit-count, .language-tag {
+              background-color: #238636;
+              color: #fff;
+              padding: 2px 5px;
+              border-radius: 10px;
+              font-size: 12px;
+              font-weight: 500;
+            }
 
             .language-tag {
               background-color: #3178c6;
