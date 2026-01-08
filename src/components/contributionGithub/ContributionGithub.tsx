@@ -136,11 +136,7 @@ const ContributionGithub: React.FC = () => {
                   (c) => c.date === date
                 ) || { date, count: 0 };
                 return (
-                  <div
-                    key={date}
-                    className={`contribution-square level-${contribution.count}`}
-                    title={`${date}: ${contribution.count} contributions`}
-                  />
+                
                 );
               })}
             </div>
