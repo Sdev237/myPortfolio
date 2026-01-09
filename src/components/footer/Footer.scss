@@ -36,11 +36,3 @@
 
 // Suppression de tout effet de flou ou d'opacité sur le footer
 
-
-footer,
-.footer,
-.footer * {
-  filter: none !important;
-  backdrop-filter: none !important;
-  opacity: 1 !important;
-}

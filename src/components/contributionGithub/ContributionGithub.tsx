@@ -130,20 +130,7 @@ const ContributionGithub: React.FC = () => {
                 </div>
               ))}
             </div>
-            <div className="squares-container">
-              {allDays.map((date) => {
-                const contribution = contributions.find(
-                  (c) => c.date === date
-                ) || { date, count: 0 };
-                return (
-                  <div
-                    key={date}
-                    className={`contribution-square level-${contribution.count}`}
-                    title={`${date}: ${contribution.count} contributions`}
-                  />
-                );
-              })}
-            </div>
+      
           </div>
           <div className="graph-footer">
             <span className="learn-more">
