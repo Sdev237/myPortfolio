@@ -198,7 +198,25 @@
   }
 }
 
-
+// Thème clair
+[data-theme="light"] .projects-section {
+  background: none;
+  box-shadow: none;
+  h6,
+  .project-title {
+    color: #222;
+    --text-color: #222;
+  }
+  .projects-desc,
+  .project-description {
+    color: #444;
+  }
+  .project-card {
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid #e1e4e8;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  }
+}
 
 .project-view-btn {
   display: inline-block;

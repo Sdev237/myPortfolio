@@ -92,7 +92,24 @@
         }
       }
 
-      
+      .squares-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(52 * 13px);
+        gap: 2px;
+
+        .contribution-square {
+          width: 10px;
+          height: 10px;
+          border-radius: 2px;
+          border: 1px solid #30363d;
+
+          &.level-0 { background-color: #161b22; }
+          &.level-1 { background-color: #0e4429; }
+          &.level-2 { background-color: #008a40; }
+          &.level-3 { background-color: #107d28; }
+          &.level-4 { background-color: #2fe44d; }
+        }
       }
     }
 
