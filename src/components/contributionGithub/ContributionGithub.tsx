@@ -123,7 +123,13 @@ const ContributionGithub: React.FC = () => {
             ))}
           </div>
           <div className="days-and-squares">
-            
+            <div className="days-of-week">
+              {daysOfWeek.map((day, index) => (
+                <div key={index} className="day">
+                  {day}
+                </div>
+              ))}
+            </div>
             <div className="squares-container">
               {allDays.map((date) => {
                 const contribution = contributions.find(
