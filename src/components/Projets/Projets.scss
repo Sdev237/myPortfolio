@@ -26,6 +26,12 @@
   animation-delay: var(--delay);
 }
 
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .projects-section {
   padding: 3rem 0 2rem 0;
