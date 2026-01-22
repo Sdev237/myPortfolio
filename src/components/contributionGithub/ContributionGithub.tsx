@@ -145,7 +145,18 @@ const ContributionGithub: React.FC = () => {
               })}
             </div>
           </div>
-         
+          <div className="graph-footer">
+            <span className="learn-more">
+              {totalContributions} contributions in the last year
+            </span>
+            <div className="color-scale">
+              <span>Moins</span>
+              {[0, 1, 2, 3, 4].map((level) => (
+                <span key={level} className={`scale-square level-${level}`} />
+              ))}
+              <span>Plus</span>
+            </div>
+          </div>
         </div>
         <div className="yearSelector">
           {years.map((year) => (
