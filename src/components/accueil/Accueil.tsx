@@ -202,24 +202,7 @@ const AboutSection = ({ stacks }: { stacks: Stack[] }) => (
       </h2>
       <p className="about-highlight">
       I design robust and secure {" "}
-        <a
-          className="about-badge"
-          href="https://github.com/Sdev237"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Voir mes applications web"
-        >
-          <svg
-            width="16"
-            height="16"
-            style={{ marginRight: 4, verticalAlign: "middle" }}
-            fill="currentColor"
-            viewBox="0 0 16 16"
-          >
-            <path d="M5.719 3.093a.75.75 0 0 1 .188 1.043L3.13 8l2.777 3.864a.75.75 0 1 1-1.23.854l-3-4.167a.75.75 0 0 1 0-.854l3-4.167a.75.75 0 0 1 1.043-.188zm4.562 0a.75.75 0 0 1 1.043.188l3 4.167a.75.75 0 0 1 0 .854l-3 4.167a.75.75 0 1 1-1.23-.854L12.87 8 10.093 4.136a.75.75 0 0 1 .188-1.043z" />
-          </svg>
-          web applications
-        </a>
+     
         , and I analyze
         <a
           className="about-badge"
