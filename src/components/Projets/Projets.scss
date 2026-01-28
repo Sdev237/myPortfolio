@@ -5,26 +5,6 @@
   font-size: 2em;
 }
 
-.projects-section p {
-  font-size: 1.2em;
-  color: #666;
-}
-
-.projects-section ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.projects-section li {
-  background: #e0e0e0;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 4px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.5s forwards;
-  animation-delay: var(--delay);
-}
 
 @keyframes fadeInUp {
   to {
