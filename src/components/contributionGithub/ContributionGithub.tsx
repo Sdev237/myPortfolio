@@ -160,7 +160,15 @@ const ContributionGithub: React.FC = () => {
         </div>
         <div className="yearSelector">
           {years.map((year) => (
-          
+            <button
+              key={year}
+              className={`yearSelectorButton ${
+                year === activeYear ? "active" : ""
+              }`}
+              onClick={() => setActiveYear(year)}
+            >
+              {year}
+            </button>
           ))}
         </div>
       </div>
