@@ -221,13 +221,7 @@ const AboutSection = ({ stacks }: { stacks: Stack[] }) => (
           web applications
         </a>
         , and I analyze
-        <a
-          className="about-badge"
-          href="https://www.linkedin.com/in/jedeon-sap-lontchi-10744b183"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Voir mon expertise cybersécurité"
-        >
+       
           <svg
             width="16"
             height="16"
