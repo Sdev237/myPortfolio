@@ -57,36 +57,6 @@
         display: block;
       }
 
-      .form-control {
-        background: var(--background-color);
-        border: 1px solid rgba(128, 128, 128, 0.2);
-        border-radius: 8px;
-        color: var(--text-color);
-        padding: 0.75rem 1rem;
-        transition: all 0.2s ease;
-        width: 100%;
-
-        &:focus {
-          border-color: #2ea2f0;
-          box-shadow: 0 0 0 2px rgba(46, 162, 240, 0.2);
-          outline: none;
-        }
-
-        &::placeholder {
-          color: var(--text-color);
-          opacity: 0.5;
-        }
-
-        &.is-invalid {
-          border-color: #f85149;
-          background-color: rgba(248, 81, 73, 0.1);
-
-          &:focus {
-            box-shadow: 0 0 0 2px rgba(248, 81, 73, 0.2);
-          }
-        }
-      }
-
       .error-message {
         color: #f85149;
         font-size: 0.8rem;
