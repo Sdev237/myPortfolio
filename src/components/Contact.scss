@@ -108,35 +108,6 @@
     }
   }
 
-  .modal-footer {
-    border-top: 1px solid rgba(128, 128, 128, 0.2);
-    padding: 1.5rem;
-    background: var(--background-color);
-    border-radius: 0 0 16px 16px;
-
-    .btn-primary {
-      background: #2ea2f0;
-      border: none;
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-
-      &:hover:not(:disabled) {
-        background: #1f8ad0;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(46, 162, 240, 0.3);
-      }
-
-      &:disabled {
-        background: rgba(128, 128, 128, 0.2);
-        color: var(--text-color);
-        opacity: 0.7;
-        cursor: not-allowed;
-      }
-    }
-  }
 }
 
 .contact-button {
@@ -157,16 +128,6 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(46, 162, 240, 0.3);
   }
-}
-
-// Variables CSS pour le thème clair
-[data-theme="light"] {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f6f8fa;
-  --bg-tertiary: #e1e4e8;
-  --text-primary: #24292e;
-  --text-secondary: #586069;
-  --border-color: #e1e4e8;
 }
 
 // Variables CSS pour le thème sombre
