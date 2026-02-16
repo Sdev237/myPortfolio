@@ -275,6 +275,16 @@ const AboutSection = ({ stacks }: { stacks: Stack[] }) => (
           LinkedIn
         </a>
       </p>
+      <div style={{ marginTop: "2.2rem", marginBottom: "10px" }}>
+        <h6 className="mt-3 fw-bold">Projets</h6>
+        <p className="projects-desc" >
+          I create applications and tools to be profitable and help people with
+          my skills.
+        </p>
+        <div style={{ marginTop: "-3rem" }}>
+          <Projets />
+        </div>
+      </div>
       <h6 className="mt-3">Stacks</h6>
       <Row>
         <Col
