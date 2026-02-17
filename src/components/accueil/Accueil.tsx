@@ -261,53 +261,6 @@ const AboutSection = ({ stacks }: { stacks: Stack[] }) => (
           Twitter
         </a>
         and
-        <a
-          className="about-badge"
-          href="https://www.linkedin.com/in/jedeon-sap-lontchi-10744b183"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="LinkedIn"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#fff" role="img">
-            <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.025-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.049c.476-.899 1.637-1.848 3.368-1.848 3.6 0 4.267 2.37 4.267 5.455v6.284zM5.337 7.433c-1.144 0-2.07-.927-2.07-2.07 0-1.144.926-2.07 2.07-2.07 1.143 0 2.07.926 2.07 2.07 0 1.143-.927 2.07-2.07 2.07zM6.861 20.452H3.813V9h3.048v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/>
-          </svg>
-
-          LinkedIn
-        </a>
-      </p>
-      <div style={{ marginTop: "2.2rem", marginBottom: "10px" }}>
-        <h6 className="mt-3 fw-bold">Projets</h6>
-        <p className="projects-desc" >
-          I create applications and tools to be profitable and help people with
-          my skills.
-        </p>
-        <div style={{ marginTop: "-3rem" }}>
-          <Projets />
-        </div>
-      </div>
-      <h6 className="mt-3">Stacks</h6>
-      <Row>
-        <Col
-          className="stack py-4"
-          style={{
-            border: "1px solid #333",
-            borderRadius: "0.4rem",
-            marginLeft: "1rem",
-          }}
-        >
-          <div className="d-flex flex-wrap justify-content-center ml-4">
-            {stacks.map(({ icon, name }) => (
-              <Button
-                key={name}
-                variant="outline-secondary"
-                className="m-2 stackBtn"
-              >
-                {React.cloneElement(icon, { className: "me-2" })} {name}
-              </Button>
-            ))}
-          </div>
-        </Col>
-      </Row>
     </Col>
   </>
 );
