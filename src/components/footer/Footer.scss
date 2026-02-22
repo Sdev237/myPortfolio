@@ -3,6 +3,36 @@
   text-align: center;
 }
 
+.footer-content {
+  width: 100%;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-logo {
+  margin-right: 10px;
+}
+
+.footer-links li {
+  margin: 0 10px;
+}
+
+.footer-links a {
+  color: inherit;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #2ea2f0;
+  text-decoration: underline;
+}
 
 // Suppression de tout effet de flou ou d'opacité sur le footer
 
