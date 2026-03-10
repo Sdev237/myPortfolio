@@ -75,43 +75,6 @@
     height: auto;
   }
 
-  .project-card {
-    width: 290px;
-    min-width: 290px;
-    max-width: 290px;
-    height: 210px;
-    background: linear-gradient(
-      120deg,
-      rgba(24, 28, 44, 0.95) 60%,
-      rgba(36, 44, 68, 0.85) 100%
-    );
-    border-radius: 20px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
-    padding: 1rem 1.2rem;
-    margin: 16px 32px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    opacity: 1;
-    transform: none;
-    animation: none;
-    box-sizing: border-box;
-    position: relative;
-    z-index: 1;
-
-    &:hover {
-      box-shadow: 0 8px 29px 0 rgba(46, 162, 240, 0.13);
-      transform: translateY(-6px) scale(1.025);
-      background: linear-gradient(
-        120deg,
-        rgba(36, 44, 68, 0.98) 60%,
-        rgba(24, 28, 44, 0.95) 90%
-      );
-    }
-
     .project-title {
       color: #2ea2f0 !important;
       font-size: 1.6rem;
