@@ -165,7 +165,7 @@ const UsefulLinks = () => (
       </Button>
       <a
         href="/Jedeon_Sap_Lontchi_CV.pdf"
-        download="Jedeon_Sap_Lontchi_CV.pdf"
+        download="Jedeon_Sap_Lontchi.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="p-2 d-flex align-items-center text-reset link-hover z-3 text-decoration-none"
