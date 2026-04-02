@@ -25,7 +25,6 @@ interface Stack {
   icon: JSX.Element;
   name: string;
 }
-
 interface FormData {
   name: string;
   email: string;
